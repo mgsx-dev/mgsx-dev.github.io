@@ -1,118 +1,23 @@
-<!DOCTYPE html>
-<html ng-app="app" ng-controller="MainCtrl">
+---
+layout: default
+---
 
-  <head>
-    
-    <title>MGSX</title>
-    <meta name="description" content="MGSX">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/angular.min.js"></script>
-	<script src="js/angular-route.min.js"></script>
-	<script src="json/config.js"></script>
-	<script src="index.js"></script>
-	<style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    </style>
-	<style type="text/css">
-	.divider-vertical {
-		height: 50px;
-		border-left: 1px solid #444;
-		}
-		a.dropdown-toggle:hover {
-		    cursor: pointer;
-		}
-	</style>
-  </head>
+<div class="home">
 
-  <body>
+  <h1 class="page-heading">Posts</h1>
 
-	<!--
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/mgsx-dev">View on GitHub</a>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-          <h1 id="project_title">MGSX</h1>
-          <h2 id="project_tagline"></h2>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-        </header>
-    </div>
-	-->
-	
-    <div class="navbar navbar-inverse navbar-fixed-top pull-right">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#/home">MGSX</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li><a href="#/home">Home</a></li>
-              <li><a href="#/about">About</a></li>
-              <li class="divider-vertical"></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li class="nav-header">Commercial</li>
-                  <li><a href="#/product/002">Caricature Studio (Android)</a></li>
-                  <li><a href="#/product-not/001">Morphing Studio (Android)</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">Community</li>
-                  <li><a href="#/product-not/001">Tagger</a></li>
-                  <li><a href="#/product-not/001">Das Shoot</a></li>
-                </ul>
-              </li>
-              <li class="divider-vertical"></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown">Open Source <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li class="nav-header">Applications</li>
-                  <li><a href="#/product-not/001">Procedural Texturing</a></li>
-                  <li><a href="#/product-not/001">Kinect</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">Developer Tools</li>
-                  <li><a href="#/product-not/001">Eclipse Changes Editor</a></li>
-                  <li><a href="#/product-not/001">Eclipse Apache Plugin</a></li>
-                  <li><a href="#/product-not/001">Arduino Maven Plugin</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">Games</li>
-                  <li><a href="#/product-not/001">RPG</a></li>
-                  <li><a href="#/product-not/001">Arkan</a></li>
-                  <li><a href="#/product-not/001">Game of Life</a></li>
-                </ul>
-              </li>
-              <li class="divider-vertical"></li>
-              <li><a href="#/blog">Blog</a></li>
-              <li class="divider-vertical"></li>
-              <li><a href="mailto:info@mgsx.net">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-    <div class="container">
-
-      <div ng-view></div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; MGSX 2014</p>
-      </footer>
-
-    </div> <!-- /container -->
-
-
-  </body>
-</html>
+</div>
