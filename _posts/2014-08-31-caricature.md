@@ -2,9 +2,7 @@
 layout: product
 name:  "Caricature Studio"
 date:   2014-08-31 12:24:31
-commercial: true
-type: product
-categories: product commercial android
+categories: product software
 ---
 
 This is a new Android Project !

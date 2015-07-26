@@ -5,16 +5,31 @@ layout: default
 header {
   padding-top: 50px;
   padding-bottom: 40px;
-  background-image: url('{{ site.baseurl }}/img/abstract-10.jpg');
+  background-image: url('{{ site.baseurl }}/img/abstract-2.jpg');
   background-repeat: repeat-y;
-  background-color: #01191d;
+  background-color: #fffebb;
 }
-article {
+article, .navtable {
   margin-left: 150px; 
   margin-right: 150px;
-  background-color: #F4F4F4;
+  background-color: #FAFAFA;
   padding: 20px;
 }
+
+.preview {
+  margin: auto;
+  text-align: center;
+}
+
+.navtable table {
+  margin: auto;
+}
+.navtable table tr td {
+  background-color: #FAFAF0;
+  padding: 5px;
+  spacing: 5px;
+}
+
 .post-title {
   margin-left: 100px; 
   margin-right: 100px;
@@ -25,16 +40,13 @@ article {
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.name }}</h1>
-{% if page.github %}
-	<div class="alert alert-success pull-right">
-		<a href="https://github.com/{{ site.github_username }}/{{ page.github }}">Fork me on GitHub</a>
-	</div>
-{% endif %}
+    <h1 class="post-title">Workshop - {{ page.name }}</h1>
   </header>
 
   <article class="post-content">
+
     {{ content }}
+
   </article>
 
 </div>

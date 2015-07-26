@@ -2,8 +2,7 @@
 layout: product
 name:  "Texture Studio"
 date:   2014-08-31 12:24:31
-type: product
-categories: product free android
+categories: product software
 ---
 
 This is a new <b>FREE !</b> Android Project !

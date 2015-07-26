@@ -1,9 +1,7 @@
 ---
 layout: product
 name:  "Dungeon Mastermind"
-commercial: true
-type: product
-categories: product commercial android games
+categories: product games
 ---
 <style>
 img.responsive{

@@ -36,16 +36,16 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                 <ul class="dropdown-menu inverse-dropdown">
-                <li class="dropdown-header">Commercial</li>
+                <li class="dropdown-header">Games</li>
                 	{% for post in site.posts %}
-                	{% if post.commercial and post.type == 'product' %}
+                	{% if post.categories contains 'games' and post.categories contains 'product' %}
                 	 <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                 	{% endif %}
                 	{% endfor %}
                   <li class="divider"></li>
-                  <li class="dropdown-header">Community</li>
+                  <li class="dropdown-header">Software</li>
                 	{% for post in site.posts %}
-                	{% if post.commercial != true and post.type == 'product' %}
+                	{% if post.categories contains 'software' and post.categories contains 'product' %}
                 	  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                 	{% endif %}
                 	{% endfor %}
@@ -55,23 +55,19 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown">Open Source Projects <b class="caret"></b></a>
                 <ul class="dropdown-menu inverse-dropdown">
-                  <li class="dropdown-header">Experiments</li>
-                	{% for post in site.posts %}
-                	{% if post.type == 'experiment' %}
-                	  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
-                	{% endif %}
-                	{% endfor %}
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Applications</li>
+                  <li class="dropdown-header">Software</li>
+                  {% for post in site.posts %}
+                  {% if post.categories contains 'software' and post.categories contains 'project' %}
+                    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                  {% endif %}
+                  {% endfor %}
                   <li class="divider"></li>
                   <li class="dropdown-header">Developer Tools</li>
                 	{% for post in site.posts %}
-                	{% if post.categories contains 'dev-tools' and post.type == 'opensource' %}
+                	{% if post.categories contains 'dev-tools' and post.categories contains 'project' %}
                 	  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                 	{% endif %}
                 	{% endfor %}
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Games</li>
                 </ul>
               </li>
               <li class="divider-vertical"></li>
