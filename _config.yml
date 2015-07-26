@@ -9,6 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://mgsx.net" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  mgsx-dev
+bitbucket_username: germ1
 
 # Build settings
 markdown: redcarpet
