@@ -2,22 +2,82 @@
 layout: default
 ---
 
+<style>
+header {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background-image: url('{{ site.baseurl }}/img/abstract-11.jpg');
+  background-repeat: repeat-y;
+  background-color: #ecb993;
+}
+article {
+  margin-left: 150px; 
+  margin-right: 150px;
+  background-color: #F4F4F4;
+  padding: 20px;
+}
+.post-title {
+  margin-left: 100px; 
+  margin-right: 100px;
+  color: #FFF;
+}
+.post-list{
+  font-size: 12px;
+}
+
+.post-title ul { list-style: none outside none; margin:0; padding: 0; text-align: left }
+.post-title ul li { display: inline; margin-right: 20px; color: #FFF ; font-size: 18px;}
+
+</style>
+
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <div class="post-title">
+      <h1>MGSX Foundation</h1>
+      <ul>
+        <li>Software</li>
+        <li>Game</li>
+        <li>Digital Art</li>
+      </ul>
+  </div>
+  </header>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>MGSX Foundation</h3>
+        <p>MGSX focus on software developpement including game publishing, digital art project and general software.</p>
+        <p>Beyond the products, the major work is provided freely as opensource components including libraries, developper tools and trainings.</p>
+        <p>With great experience in software engineering we often offer support in developpement process and technical expertise</p>
+        <p>Feel free to contact us for your developpement needs.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Hot Topics</h3>
+        <h4>Dungeon Mastermind coming up Automne 2015</h4>
+        <p>Dungeon Mastermind is a tower defence games in which the player embody the game master like old time RPG. His goal is to defeat heroes in the maze of his creation. Monster, treasure, traps are his assets and he will have to construct his dungeons well throw differents levels.</p>
+        <p>The game economic model is quite simple, the first world is totally free and the other one can be purchased separatly. The first release willl include the first season, more season will come after.</p>
+        <p>First release will be available on Android platform. PC and iOS version are not scheduled yet.</p>
+        <p><a href="{% post_url 2015-07-26-DungeonMastermind %}">Read more ...</a></p>
+      </div>
+      <div class="col-md-4">
+        <h3 class="page-heading">Recent Posts</h3>
+        <ul class="post-list">
+          {% for post in site.posts offset: 0 limit: 10 %}
+            <li>
+              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <!--
+        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        -->
+      </div>
+    </div>
+  </div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  
 
 </div>

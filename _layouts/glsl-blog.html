@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<style>
+header {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background-image: url('{{ site.baseurl }}/img/abstract-2.jpg');
+  background-repeat: repeat-y;
+  background-color: #fffebb;
+}
+article, .navtable {
+  margin-left: 150px; 
+  margin-right: 150px;
+  background-color: #FAFAFA;
+  padding: 20px;
+}
+
+.preview {
+  margin: auto;
+  text-align: center;
+}
+
+.navtable table {
+  margin: auto;
+}
+.navtable table tr td {
+  background-color: #FAFAF0;
+  padding: 5px;
+  spacing: 5px;
+}
+
+.post-title {
+  margin-left: 100px; 
+  margin-right: 100px;
+  color: #FFF;
+}
+
+</style>
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">GLSL {{ page.name }}</h1>
+  </header>
+
+  <article class="post-content">
+
+    {{ content }}
+
+{% assign sorted_posts = (site.posts | where: 'type', 'glsl'  | where: 'group', page.group | sort: 'title', 'first') %}
+{% for post in sorted_posts %}
+
+  <a href="{{ post.url }}"><img src="{{ post.preview }}"></a>
+
+{% endfor %}
+
+  </article>
+
+</div>
