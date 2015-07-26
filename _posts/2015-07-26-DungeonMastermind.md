@@ -13,7 +13,7 @@ img.responsive{
 }
 </style>
 
-<div class="container">
+<div class="container-fluid">
 	<div class="row block">
 		<div class="col-md-12">
 		<p>Dungeon Mastermind is a tower defence games in which the player embody the game master like old time RPG. His goal is to defeat heroes in the maze of his creation. Monster, treasure, traps are his assets and he will have to construct his dungeons well throw differents levels.</p>
