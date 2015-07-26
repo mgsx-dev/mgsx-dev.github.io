@@ -6,6 +6,7 @@ type: glsl
 group: noise
 preview: /img/blog/noise/thumb/007-fractal-noise.png
 screenshot: /img/blog/noise/007-fractal-noise.png
+excerpt: "That's not bad. So, move on to fractal noise."
 before: 6 - Hermite
 after: 8 - Perlin Noise
 ---

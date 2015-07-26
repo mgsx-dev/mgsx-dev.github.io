@@ -6,6 +6,7 @@ type: glsl
 group: noise
 preview: /img/blog/noise/thumb/006-001-understand-hermite.png
 screenshot: /img/blog/noise/006-001-understand-hermite.png
+excerpt: "To help you understand hermite interpolation, let's draw the curve."
 after: 6.2 - Noise 1D
 parent: 6 - Hermite
 ---

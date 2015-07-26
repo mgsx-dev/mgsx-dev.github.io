@@ -6,6 +6,7 @@ type: glsl
 group: noise
 preview: /img/blog/noise/thumb/010-enjoy-the-noise.gif
 screenshot: /img/blog/noise/010-enjoy-the-noise.png
+excerpt: "That's not too bad :-)"
 before: 9 - Animated Noise
 ---
 ## Explainations

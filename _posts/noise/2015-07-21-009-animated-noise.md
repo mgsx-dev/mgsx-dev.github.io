@@ -6,6 +6,7 @@ type: glsl
 group: noise
 preview: /img/blog/noise/thumb/009-animated-noise.gif
 screenshot: /img/blog/noise/009-animated-noise.png
+excerpt: "That's really nice ! But how to animate it ?"
 before: 8 - Perlin Noise
 after: 10 - Enjoy The Noise
 ---

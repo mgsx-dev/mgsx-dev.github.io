@@ -6,6 +6,7 @@ type: glsl
 group: gradient
 preview: /img/blog/gradient/thumb/006-001-animated-iridescence.gif
 screenshot: /img/blog/gradient/006-001-animated-iridescence.png
+excerpt: "To see iridescence in action, let's animate it with noise."
 parent: 6 - Iridescence
 ---
 ## Explainations

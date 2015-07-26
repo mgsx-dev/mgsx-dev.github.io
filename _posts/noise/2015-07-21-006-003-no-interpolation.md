@@ -6,6 +6,7 @@ type: glsl
 group: noise
 preview: /img/blog/noise/thumb/006-003-no-interpolation.gif
 screenshot: /img/blog/noise/006-003-no-interpolation.png
+excerpt: "Let's get back a little to understand interpolation"
 before: 6.2 - Noise 1D
 after: 6.4 - Linear Interpolation
 parent: 6 - Hermite

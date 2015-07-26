@@ -2,6 +2,7 @@
 layout: product
 name:  "Dungeon Mastermind"
 categories: product games
+excerpt: "Dungeon Mastermind is a tower defence games in which the player embody the game master like old time RPG."
 ---
 <style>
 img.responsive{

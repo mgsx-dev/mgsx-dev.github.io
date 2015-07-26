@@ -6,7 +6,9 @@ type:  blog
 github: graphics-procedural-modeling
 ---
 
-There is many way to make procedural texturing. You can use dedicated software lien [Texture Studio]({ post_url 2014-08-31-texture-studio }), Blender. You can directly code it with shaders with GLSL.
+There is many way to make procedural texturing. You can use dedicated software like Blender or you can directly code it with shaders with GLSL.
+
+Another approach is cover in [Texture Studio]({ post_url 2014-08-31-texture-studio }).
 
 This workshop focus on Eclipse modeling tools to acheive a software allowing to produce texture.
 

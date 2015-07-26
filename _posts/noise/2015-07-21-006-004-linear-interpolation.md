@@ -6,6 +6,7 @@ type: glsl
 group: noise
 preview: /img/blog/noise/thumb/006-004-linear-interpolation.gif
 screenshot: /img/blog/noise/006-004-linear-interpolation.png
+excerpt: "Let's go to understand linear interpolation"
 before: 6.3 - No Interpolation
 after: 6.5 - Perlin 1D
 parent: 6 - Hermite
