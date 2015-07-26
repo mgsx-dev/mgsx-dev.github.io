@@ -2,19 +2,6 @@
 layout: default
 ---
 <style>
-header {
-  padding-top: 30px;
-  padding-bottom: 20px;
-  background-image: url('{{ site.baseurl }}/img/abstract-2.jpg');
-  background-repeat: repeat-y;
-  background-color: #fffebb;
-}
-article, .navtable {
-  margin-left: 150px; 
-  margin-right: 150px;
-  background-color: #FAFAFA;
-  padding: 20px;
-}
 
 .preview {
   margin: auto;
@@ -30,17 +17,11 @@ article, .navtable {
   spacing: 5px;
 }
 
-.post-title {
-  margin-left: 100px; 
-  margin-right: 100px;
-  color: #FFF;
-}
-
 </style>
 <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">Workshop GLSL - {{ page.group | capitalize }} - Chapter {{ page.name }}</h1>
+  <header class="workshop">
+    <h1>Workshop GLSL - {{ page.group | capitalize }} - Chapter {{ page.name }}</h1>
   </header>
 
   <div class="navtable">
@@ -108,7 +89,7 @@ article, .navtable {
 
   </div>
 
-  <article class="post-content">
+  <article class="container-fluid post-content">
 
     <div class="preview">
       <img src="{{ page.screenshot }}">

@@ -1,35 +1,15 @@
 ---
 layout: default
 ---
-<style>
-header {
-  padding-top: 50px;
-  padding-bottom: 40px;
-  background-image: url('{{ site.baseurl }}/img/abstract-10.jpg');
-  background-repeat: repeat-y;
-  background-color: #01191d;
-}
-article {
-  margin-left: 150px; 
-  margin-right: 150px;
-  background-color: #F4F4F4;
-  padding: 20px;
-}
-.post-title {
-  margin-left: 100px; 
-  margin-right: 100px;
-  color: #FFF;
-}
 
-</style>
 <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.name }}</h1>
+  <header class="project">
+    <h1>{{ page.name }}</h1>
     {% include scm.html %}
   </header>
 
-  <article class="post-content">
+  <article class="container-fluid post-content">
     {{ content }}
   </article>
 

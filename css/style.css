@@ -1,0 +1,49 @@
+---
+---
+/* global ? */
+body {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.divider-vertical {
+	height: 50px;
+	border-left: 1px solid #444;
+}
+a.dropdown-toggle:hover {
+    cursor: pointer;
+}
+
+/* header */
+header {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 150px;
+	background-repeat: repeat-y;
+	color: #FFF;
+}
+header.product, 
+header.home{
+	background-image: url('{{ site.baseurl }}/img/abstract-11.jpg');
+	background-color: #ecb993;
+}
+header.project{
+	background-image: url('{{ site.baseurl }}/img/abstract-10.jpg');
+	background-color: #01191d;
+}
+header.workshop{
+	background-image: url('{{ site.baseurl }}/img/abstract-2.jpg');
+	background-color: #fffebb;
+}
+header ul { list-style: none outside none; margin:0; padding: 0; text-align: left }
+header ul li { display: inline; margin-left: 40px; color: #FFF ; font-size: 20px;}
+
+/* article */
+article {
+	margin-left: 150px; 
+	margin-right: 150px;
+	background-color: #F4F4F4;
+	padding: 20px;
+}
+.post-list{
+  font-size: 12px;
+}
