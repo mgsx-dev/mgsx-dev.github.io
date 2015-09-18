@@ -57,10 +57,4 @@ img.responsive{
 			<img class="responsive" src="{{ site.baseurl }}/img/blog/dungeon-mastermind/game.png">
 		</div>
 	</div>
-	<div class="row block">
-		<div class="col-md-12">
-			<h2>Work in progress</h2>
-			<p>First release will be avialable on Android platform.</p>
-		</div>
-	</div>
 </div>

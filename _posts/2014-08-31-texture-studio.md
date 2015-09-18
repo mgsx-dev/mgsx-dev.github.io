@@ -1,8 +1,8 @@
 ---
-layout: project
+layout: product
 name:  "Texture Studio"
 date:   2014-08-31 12:24:31
-categories: project software
+categories: product software
 ---
 
 Texture studio is a software for graphic designers. It allow to easily build complex procedural textures to be used later in graphic software or games.

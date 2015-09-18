@@ -53,16 +53,16 @@
               </li>
               <li class="divider-vertical"></li>
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown">Open Source Projects <b class="caret"></b></a>
+                <a class="dropdown-toggle" data-toggle="dropdown">Developer Tools <b class="caret"></b></a>
                 <ul class="dropdown-menu inverse-dropdown">
-                  <li class="dropdown-header">Software</li>
+                  <li class="dropdown-header">Librairies</li>
                   {% for post in site.posts %}
                   {% if post.categories contains 'software' and post.categories contains 'project' %}
                     <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                   {% endif %}
                   {% endfor %}
                   <li class="divider"></li>
-                  <li class="dropdown-header">Developer Tools</li>
+                  <li class="dropdown-header">Plugins</li>
                 	{% for post in site.posts %}
                 	{% if post.categories contains 'dev-tools' and post.categories contains 'project' %}
                 	  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
@@ -81,7 +81,7 @@
                 	{% endif %}
                 	{% endfor %}
                   <li class="divider"></li>
-                  <li class="dropdown-header">Other</li>
+                  <li class="dropdown-header">Misc</li>
                   {% for post in site.posts %}
                   {% if post.type == 'blog' %}
                     <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
@@ -90,7 +90,7 @@
                 </ul>
               </li>
               <li class="divider-vertical"></li>
-              <li><a href="mailto:info@mgsx.net">Contact</a></li>
+              <li><a href="mailto:{{ site.email }}">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
       </div>

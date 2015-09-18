@@ -7,12 +7,25 @@ tags: dev apache eclipse
 github: eclipse-plugin-apache
 ---
 
-Eclipse plugin for website developpement based on Apache server (PHP among others).
+<div class="container-fluid">
+	<div class="row block">
+		<div class="col-md-8">
 
-The goal of this plugin is to link eclipse web project to local apache installation. This enable developpers to quickly setup developpement environnement.
+<p>Eclipse plugin for website developpement based on Apache server (PHP among others).</p>
 
-The plugin handle virtual host definition and several options.
+<p>The goal of this plugin is to link eclipse web project to local apache installation. This enable developpers to quickly setup developpement environnement.</p>
 
-<div class="alert alert-danger" role="alert">
-  <p>Developpement on this plugin as been suspended but the source code can help developpers to enter eclipse plugin developpement.</p>
+<p>The plugin handle virtual host definition and several options.</p>
+
+<a href="https://github.com/mgsx-dev/eclipse-plugin-apache">Read more on the project page</a>
+
+		</div>
+		<div class="col-md-4">
+
+<img class="responsive" src="{{ site.baseurl }}/img/blog/eclipse-plugin-apache-capture.png">
+
+		</div>
+	</div>
 </div>
+
+
