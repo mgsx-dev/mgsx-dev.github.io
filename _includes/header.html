@@ -1,0 +1,97 @@
+<style>
+/* bottstrap patch dropdown inversed */
+.inverse-dropdown{
+  background-color: #222;
+  border-color: #111;
+}
+.inverse-dropdown li a{
+  color: #999;
+}
+.inverse-dropdown li a:hover{
+  color: #000;
+}
+.inverse-dropdown .divider{
+   background-color: #333;
+}
+.inverse-dropdown .dropdown-header{
+   color: #444;
+}
+
+</style>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/mgsx-logo.png" style="padding-top: 13px"></a>
+        </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="{{ site.baseurl }}/">Home</a></li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+                <ul class="dropdown-menu inverse-dropdown">
+                <li class="dropdown-header">Games</li>
+                	{% for post in site.posts %}
+                	{% if post.categories contains 'games' and post.categories contains 'product' %}
+                	 <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                	{% endif %}
+                	{% endfor %}
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Software</li>
+                	{% for post in site.posts %}
+                	{% if post.categories contains 'software' and post.categories contains 'product' %}
+                	  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                	{% endif %}
+                	{% endfor %}
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Developer Tools <b class="caret"></b></a>
+                <ul class="dropdown-menu inverse-dropdown">
+                  <li class="dropdown-header">Librairies</li>
+                  {% for post in site.posts %}
+                  {% if post.categories contains 'software' and post.categories contains 'project' %}
+                    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                  {% endif %}
+                  {% endfor %}
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Plugins</li>
+                	{% for post in site.posts %}
+                	{% if post.categories contains 'dev-tools' and post.categories contains 'project' %}
+                	  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                	{% endif %}
+                	{% endfor %}
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Workshop <b class="caret"></b></a>
+                <ul class="dropdown-menu inverse-dropdown">
+                  <li class="dropdown-header">GLSL</li>
+                	{% for post in site.posts %}
+                	{% if post.type == 'blog-glsl' %}
+                	  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                	{% endif %}
+                	{% endfor %}
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Misc</li>
+                  {% for post in site.posts %}
+                  {% if post.type == 'blog' %}
+                    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                  {% endif %}
+                  {% endfor %}
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li><a href="mailto:{{ site.email }}">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+      </div>
+    </nav>

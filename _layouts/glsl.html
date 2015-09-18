@@ -1,0 +1,101 @@
+---
+layout: default
+---
+<style>
+
+.preview {
+  margin: auto;
+  text-align: center;
+}
+
+.navtable table {
+  margin: auto;
+}
+.navtable table tr td {
+  background-color: #FAFAF0;
+  padding: 5px;
+  spacing: 5px;
+}
+
+</style>
+<div class="post">
+
+  <header class="workshop">
+    <h1>Workshop GLSL - {{ page.group | capitalize }} - Chapter {{ page.name }}</h1>
+  </header>
+
+  <div class="navtable">
+  <table>
+    <tr>
+      <td>&nbsp;</td>
+      <td>
+{% if page.parent %} 
+{% for post in site.posts %}
+{% if post.name == page.parent %}
+        <img src="{{ post.preview }}"><br>
+        <a href="{{ post.url }}">Parent</a>
+{% endif %}
+{% endfor %}
+{% endif %}
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+{% if page.before %} 
+{% for post in site.posts %}
+{% if post.name == page.before %}
+        <img src="{{ post.preview }}"><br>
+        <a href="{{ post.url }}">Previous</a>
+{% endif %}
+{% endfor %}
+{% endif %}
+      </td>
+      <td>
+        <img src="{{ page.preview }}"><br>
+        Current
+      </td>
+      <td>
+{% if page.after %} 
+{% for post in site.posts %}
+{% if post.name == page.after %}
+        <img src="{{ post.preview }}"><br>
+        <a href="{{ post.url }}">Next</a>
+{% endif %}
+{% endfor %}
+{% endif %}
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+{% if page.child %} 
+{% for post in site.posts %}
+{% if post.name == page.child %}
+        <img src="{{ post.preview }}"><br>
+        <a href="{{ post.url }}">Further</a>
+{% endif %}
+{% endfor %}
+{% endif %}
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+
+  <hr>
+
+  </div>
+
+  <article class="container-fluid post-content">
+
+    <div class="preview">
+      <img src="{{ page.screenshot }}">
+    </div>
+
+    {{ content }}
+  </article>
+
+</div>

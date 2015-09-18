@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="post">
+
+  <header class="workshop">
+    <h1>Workshop GLSL - {{ page.name }}</h1>
+  </header>
+
+  <article class="container-fluid post-content">
+
+    {{ content }}
+
+{% assign sorted_posts = (site.posts | where: 'type', 'glsl'  | where: 'group', page.group | sort: 'title', 'first') %}
+{% for post in sorted_posts %}
+
+  <a href="{{ post.url }}"><img src="{{ post.preview }}"></a>
+
+{% endfor %}
+
+  </article>
+
+</div>
