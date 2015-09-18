@@ -1,0 +1,110 @@
+<document id="1">
+  <element id="2" type="net.mgsx.numart.procedural.renderer.TextureRenderer">
+    <param id="3" name="offset">
+      <value class="element" id="4" type="net.mgsx.numart.math.Point3D">
+        <param id="5" name="x">
+          <value class="double">0.0</value>
+        </param>
+        <param id="6" name="y">
+          <value class="double">0.0</value>
+        </param>
+        <param id="7" name="z">
+          <value class="double">0.0</value>
+        </param>
+      </value>
+    </param>
+    <param id="8" name="size">
+      <value class="element" id="9" type="net.mgsx.numart.math.Point3D">
+        <param id="10" name="x">
+          <value class="double">4.0</value>
+        </param>
+        <param id="11" name="y">
+          <value class="double">4.0</value>
+        </param>
+        <param id="12" name="z">
+          <value class="double">4.0</value>
+        </param>
+      </value>
+    </param>
+    <param id="13" name="texture">
+      <value class="element" id="14" type="net.mgsx.numart.procedural.texture.impl.TextureMixer">
+        <param id="15" name="a">
+          <value class="element" id="16" type="net.mgsx.numart.procedural.texture.impl.SolidColor">
+            <param id="17" name="color">
+              <value class="element" id="18" type="net.mgsx.numart.math.Color">
+                <param id="19" name="r">
+                  <value class="double">0.47058823704719543</value>
+                </param>
+                <param id="20" name="g">
+                  <value class="double">0.14901961386203766</value>
+                </param>
+                <param id="21" name="b">
+                  <value class="double">0.14901961386203766</value>
+                </param>
+                <param id="22" name="a">
+                  <value class="double">1.0</value>
+                </param>
+              </value>
+            </param>
+          </value>
+        </param>
+        <param id="23" name="b">
+          <value class="element" id="24" type="net.mgsx.numart.procedural.texture.impl.SolidColor">
+            <param id="25" name="color">
+              <value class="element" id="26" type="net.mgsx.numart.math.Color">
+                <param id="27" name="r">
+                  <value class="double">1.0</value>
+                </param>
+                <param id="28" name="g">
+                  <value class="double">0.800000011920929</value>
+                </param>
+                <param id="29" name="b">
+                  <value class="double">0.4000000059604645</value>
+                </param>
+                <param id="30" name="a">
+                  <value class="double">1.0</value>
+                </param>
+              </value>
+            </param>
+          </value>
+        </param>
+        <param id="31" name="mix">
+          <value class="element" id="32" type="net.mgsx.numart.procedural.texture.impl.Resample">
+            <param id="33" name="stepsize">
+              <value class="double">0.1</value>
+            </param>
+            <param id="34" name="operand">
+              <value class="element" id="35" type="net.mgsx.numart.procedural.texture.impl.Sinusoidal">
+                <param id="36" name="phase">
+                  <value class="double">0.28</value>
+                </param>
+                <param id="37" name="frequency">
+                  <value class="double">1.0</value>
+                </param>
+                <param id="38" name="operand">
+                  <value class="element" id="39" type="net.mgsx.numart.procedural.texture.impl.FractalNoise">
+                    <param id="40" name="octavia">
+                      <value class="int">4</value>
+                    </param>
+                    <param id="41" name="persistence">
+                      <value class="double">0.3</value>
+                    </param>
+                    <param id="42" name="noiseSeed">
+                      <value class="long">-559038737</value>
+                    </param>
+                  </value>
+                </param>
+              </value>
+            </param>
+          </value>
+        </param>
+      </value>
+    </param>
+    <param id="43" name="spheric">
+      <value class="boolean">false</value>
+    </param>
+    <param id="44" name="antialias">
+      <value class="int">1</value>
+    </param>
+  </element>
+</document>
