@@ -13,7 +13,7 @@ parent: 6 - Iridescence
 
 To see iridescence in action, let's animate it with noise.
 
-Noise generation is not covered in this chapter, see [Noise chapter]({% post_url 2015-07-22-Noise %}) for more details.
+Noise generation is not covered in this chapter, see noise chapter for more details.
 
 ``` glsl
 #define PROCESSING_COLOR_SHADER
@@ -182,10 +182,10 @@ void main( void ) {
 We compute an animated FM noise (2 compound noise signals)
 
 ``` glsl
-  float vtime = time * 0.05f;
-  float freq = 2.0f;
+  float vtime = time * 0.05;
+  float freq = 2.0;
   float noiseFM = cnoise(vec3(position, vtime) * freq * 3.0);
-  float noise = cnoise(vec3(position, vtime + noiseFM) * freq) * 0.5f + 0.5f;
+  float noise = cnoise(vec3(position, vtime + noiseFM) * freq) * 0.5 + 0.5;
 
 ```
 
@@ -392,10 +392,10 @@ void main( void ) {
 
   vec2 position = gl_FragCoord.xy / resolution.xy;
   
-  float vtime = time * 0.05f;
-  float freq = 2.0f;
+  float vtime = time * 0.05;
+  float freq = 2.0;
   float noiseFM = cnoise(vec3(position, vtime) * freq * 3.0);
-  float noise = cnoise(vec3(position, vtime + noiseFM) * freq) * 0.5f + 0.5f;
+  float noise = cnoise(vec3(position, vtime + noiseFM) * freq) * 0.5 + 0.5;
 
   float gradient = smoothstep(0.4, 0.6, noise);
 
