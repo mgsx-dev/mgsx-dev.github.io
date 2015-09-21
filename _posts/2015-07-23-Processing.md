@@ -1,7 +1,6 @@
 ---
 layout: glsl-blog
 name:   "Processing"
-date:   2015-07-20 12:24:31
 type:   blog-glsl
 group:  processing
 github: processing-glsl

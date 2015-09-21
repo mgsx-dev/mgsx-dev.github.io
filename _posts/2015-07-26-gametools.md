@@ -3,7 +3,7 @@ layout: project
 name:  "Game Tools"
 categories: project software
 tags: dev ruby
-bitbucket: game-tools
+#bitbucket: game-tools
 ---
 
 GameTools is a set of ruby libraries to help in games developpement process.

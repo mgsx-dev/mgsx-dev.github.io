@@ -13,7 +13,7 @@ parent: 6 - Iridescence
 
 To see iridescence in action, let's animate it with noise.
 
-Noise generation is not covered in this chapter, see [Noise chapter]({% post_url 2015-07-20-Noise %}) for more details.
+Noise generation is not covered in this chapter, see [Noise chapter]({% post_url 2015-07-22-Noise %}) for more details.
 
 ``` glsl
 #define PROCESSING_COLOR_SHADER

@@ -35,7 +35,18 @@ header.workshop{
 	background-color: #fffebb;
 }
 header ul { list-style: none outside none; margin:0; padding: 0; text-align: left }
-header ul li { display: inline; margin-left: 40px; color: #FFF ; font-size: 20px;}
+header ul li { display: inline; margin-left: 20pt; color: #FFF ; font-size: 20px;}
+
+header.home ul.subtitle li {
+  font-style: italic;
+  letter-spacing: 4pt;
+  color: #f4f39d;
+  font-size: 14px;
+  font-weight: bold;
+}
+header.home ul.small li {
+	font-size: 16px;
+}
 
 /* article */
 article {

@@ -1,14 +1,13 @@
 ---
 layout: blog
 name:  "Procedural Texturing in Eclipse"
-date:   2014-08-31 12:24:31
 type:  blog
 github: graphics-procedural-modeling
 ---
 
 There is many way to make procedural texturing. You can use dedicated software like Blender or you can directly code it with shaders with GLSL.
 
-Another approach is cover in [Texture Studio]({% post_url 2014-08-31-texture-studio %}).
+Another approach is cover in [Texture Studio]({% post_url 2015-09-18-texture-studio %}).
 
 This workshop focus on Eclipse modeling tools to acheive a software allowing to produce texture.
 
