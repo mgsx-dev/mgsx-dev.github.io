@@ -10,7 +10,7 @@ excerpt: "To help you understand hermite interpolation, let's draw the curve."
 after: 6.2 - Noise 1D
 parent: 6 - Hermite
 ---
-## Explainations
+## Explanations
 
 To help you understand hermite interpolation, let's draw the curve.
 

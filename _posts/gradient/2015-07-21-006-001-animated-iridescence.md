@@ -9,7 +9,7 @@ screenshot: /img/blog/gradient/006-001-animated-iridescence.png
 excerpt: "To see iridescence in action, let's animate it with noise."
 parent: 6 - Iridescence
 ---
-## Explainations
+## Explanations
 
 To see iridescence in action, let's animate it with noise.
 

@@ -10,7 +10,7 @@ excerpt: "That's not bad. So, move on to fractal noise."
 before: 6 - Hermite
 after: 8 - Perlin Noise
 ---
-## Explainations
+## Explanations
 
 That's not bad. So, move on to fractal noise.
 

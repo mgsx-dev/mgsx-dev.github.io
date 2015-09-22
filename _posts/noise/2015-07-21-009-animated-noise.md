@@ -10,7 +10,7 @@ excerpt: "That's really nice ! But how to animate it ?"
 before: 8 - Perlin Noise
 after: 10 - Enjoy The Noise
 ---
-## Explainations
+## Explanations
 
 That's really nice ! But how to animate it ?
 From here, we've work in two dimensions. We need a third dimmension to have animated noise.

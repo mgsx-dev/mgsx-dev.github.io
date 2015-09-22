@@ -11,7 +11,7 @@ before: 6.2 - Noise 1D
 after: 6.4 - Linear Interpolation
 parent: 6 - Hermite
 ---
-## Explainations
+## Explanations
 
 Let's get back a little to understand interpolation
 

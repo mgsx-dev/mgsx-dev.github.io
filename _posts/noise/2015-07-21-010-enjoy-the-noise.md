@@ -9,7 +9,7 @@ screenshot: /img/blog/noise/010-enjoy-the-noise.png
 excerpt: "That's not too bad :-)"
 before: 9 - Animated Noise
 ---
-## Explainations
+## Explanations
 
 That's not too bad :-)
 

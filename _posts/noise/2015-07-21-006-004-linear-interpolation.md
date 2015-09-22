@@ -11,7 +11,7 @@ before: 6.3 - No Interpolation
 after: 6.5 - Perlin 1D
 parent: 6 - Hermite
 ---
-## Explainations
+## Explanations
 
 Let's go to understand linear interpolation
 
