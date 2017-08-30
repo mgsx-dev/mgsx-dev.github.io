@@ -4,7 +4,7 @@ name:   "WebGL game with Libgdx"
 type:   blog
 group:  libgdx
 github: html5-game-tutorial
-permalink: html5-game-tutorial
+permalink: html5-libgdx-tutorial
 ---
 
 This tutorial cover the following use case : **"I want to deploy a HTML5/WebGL game to the web and I have no money"**
