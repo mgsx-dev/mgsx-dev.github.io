@@ -1,7 +1,7 @@
 ---
 layout: product
 name:  "Caricature"
-categories: product software
+categories: game product
 published: false
 ---
 

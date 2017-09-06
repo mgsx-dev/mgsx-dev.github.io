@@ -36,40 +36,54 @@
               <li><a href="{{ site.baseurl }}/services.html">Services</a></li>
               <li class="divider-vertical"></li>
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+                <a class="dropdown-toggle" data-toggle="dropdown">Releases <b class="caret"></b></a>
                 <ul class="dropdown-menu inverse-dropdown">
-                <li class="dropdown-header">Games</li>
+                <li class="dropdown-header">Games &amp; Creations</li>
                 	{% for post in site.posts %}
-                	{% if post.categories contains 'games' and post.categories contains 'product' %}
+                	{% if post.categories contains 'game' and post.categories contains 'product' %}
                 	 <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                 	{% endif %}
                 	{% endfor %}
                   <li class="divider"></li>
-                  <li class="dropdown-header">Software</li>
-                	{% for post in site.posts %}
-                	{% if post.categories contains 'software' and post.categories contains 'product' %}
-                	  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
-                	{% endif %}
-                	{% endfor %}
-                </ul>
-              </li>
-              <li class="divider-vertical"></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown">Developer Tools <b class="caret"></b></a>
-                <ul class="dropdown-menu inverse-dropdown">
-                  <li class="dropdown-header">Librairies</li>
+                  <li class="dropdown-header">Software &amp; Plugins</li>
                   {% for post in site.posts %}
-                  {% if post.categories contains 'software' and post.categories contains 'project' %}
+                  {% if post.categories contains 'software' and post.categories contains 'product' %}
                     <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                   {% endif %}
                   {% endfor %}
                   <li class="divider"></li>
-                  <li class="dropdown-header">Plugins</li>
-                	{% for post in site.posts %}
-                	{% if post.categories contains 'dev-tools' and post.categories contains 'project' %}
-                	  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
-                	{% endif %}
-                	{% endfor %}
+                  <li class="dropdown-header">Libraries &amp; Tools</li>
+                  {% for post in site.posts %}
+                  {% if post.categories contains 'library' and post.categories contains 'product' %}
+                    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                  {% endif %}
+                  {% endfor %}
+                </ul>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Work in progress <b class="caret"></b></a>
+                <ul class="dropdown-menu inverse-dropdown">
+                <li class="dropdown-header">Games &amp; Creations</li>
+                  {% for post in site.posts %}
+                  {% if post.categories contains 'game' and post.categories contains 'wip' %}
+                   <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                  {% endif %}
+                  {% endfor %}
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Software &amp; Plugins</li>
+                  {% for post in site.posts %}
+                  {% if post.categories contains 'software' and post.categories contains 'wip' %}
+                    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                  {% endif %}
+                  {% endfor %}
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Libraries &amp; Tools</li>
+                  {% for post in site.posts %}
+                  {% if post.categories contains 'library' and post.categories contains 'wip' %}
+                    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                  {% endif %}
+                  {% endfor %}
                 </ul>
               </li>
               <li class="divider-vertical"></li>

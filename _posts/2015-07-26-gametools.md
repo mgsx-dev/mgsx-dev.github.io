@@ -1,7 +1,7 @@
 ---
 layout: project
 name:  "Game Tools"
-categories: project software
+categories: library wip
 tags: dev ruby
 #bitbucket: game-tools
 ---

@@ -1,7 +1,7 @@
 ---
 layout: project
 name:  "Apache Eclipse Plugin"
-categories: project dev-tools
+categories: software product
 tags: dev apache eclipse
 github: eclipse-plugin-apache
 ---

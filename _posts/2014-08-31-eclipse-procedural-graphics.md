@@ -1,7 +1,7 @@
 ---
 layout: blog
 name:  "Procedural Texturing in Eclipse"
-type:  blog
+categories: software product
 github: graphics-procedural-modeling
 ---
 
