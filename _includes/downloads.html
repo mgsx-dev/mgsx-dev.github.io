@@ -1,0 +1,21 @@
+
+{% if page.itchio_name or page.android_id %}
+<div class="row text-center">
+    {% if page.itchio_name %}
+    <div style="display: inline-block">
+        <a href="https://{{ page.itchio_username }}.itch.io/{{ page.itchio_name }}" target="_blank"><img src="{{ site.baseurl }}/images/itch-badge.png" height="46px"></a>
+    </div>
+    {% endif %}
+    {% if page.android_id %}
+    <div style="display: inline-block">
+        <a href="https://play.google.com/store/apps/details?id={{ page.android_id }}" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/badge_new.png"></a>
+    </div>
+    {% endif %}
+
+
+
+</div>
+
+<hr style="border-top: 1px solid #eee">
+
+{% endif %}
