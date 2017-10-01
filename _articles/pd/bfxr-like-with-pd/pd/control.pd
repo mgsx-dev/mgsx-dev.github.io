@@ -1,0 +1,46 @@
+#N canvas 487 309 733 454 10;
+#X obj 105 113 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1100 1;
+#X obj 134 277 s \$1;
+#X obj 137 19 r \$1;
+#X msg 137 41 set \$1;
+#X obj 231 9 loadbang;
+#X obj 231 31 list \$2 \$3;
+#X obj 231 53 list prepend range;
+#X obj 231 75 list trim;
+#X obj 240 113 nbx 5 14 0 1000 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 86.6142 256;
+#X text 189 279 <- both numeric and slider will send to the symbol
+;
+#X text 5 23 update slider if value change ->, f 16;
+#X text 387 40 <- on load (or when parameters changed) we update the
+controls limit by sending a message (range min max) to both controls.
+, f 40;
+#X text 320 117 <- the red rectangle is the visible part of our abstraction
+, f 41;
+#X obj 102 392 s control-change;
+#X text 165 216 <- we control the trigging order : from right to left
+\, first update value and then play the sound. If not it looses sync.
+;
+#X text 239 391 <- we send a global bang to trigger the sound in the
+main patch. We add a 50ms delay to avoid trigger flooding., f 64;
+#X msg 102 314 clear \, \$1;
+#X obj 102 224 t f f;
+#X obj 102 363 list prepend \$1;
+#X obj 102 338 pipe 50;
+#X connect 0 0 17 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
+#X connect 3 0 8 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 17 0;
+#X connect 16 0 19 0;
+#X connect 17 0 16 0;
+#X connect 17 1 1 0;
+#X connect 18 0 13 0;
+#X connect 19 0 18 0;
+#X coords 0 -1 1 1 200 32 1 100 100;

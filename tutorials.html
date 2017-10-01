@@ -22,6 +22,19 @@ subtitle: Experience sharing
         {% endfor %}
     </ul>
 
+    {% assign pd_posts = site.articles | where: 'group', 'pd' %}
+    {% assign pd_posts_size = pd_posts | size %}
+    {% if pd_posts_size != 0 %}
+
+    <li>Puredata</li>
+    <ul>
+      {% for post in pd_posts %}
+        <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+      {% endfor %}
+    </ul>
+
+    {% endif %}
+
     <!--
     <li>Misc</li>
     <ul>

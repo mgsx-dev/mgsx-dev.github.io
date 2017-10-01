@@ -92,13 +92,31 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
                 <ul class="dropdown-menu inverse-dropdown">
+
                   <li class="dropdown-header">LibGDX</li>
                   {% for post in site.posts %}
                   {% if post.type == 'blog' and post.group == 'libgdx' %}
                     <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                   {% endif %}
                   {% endfor %}
+
+
+                  {% assign pd_posts = site.articles | where: 'group', 'pd' %}
+                  {% assign pd_posts_size = pd_posts | size %}
+                  {% if pd_posts_size != 0 %}
                   <li class="divider"></li>
+                  
+                  <li class="dropdown-header">Puredata</li>
+                  {% for post in pd_posts %}
+                  
+                    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                  
+                  {% endfor %}
+
+                  {% endif %}
+
+                  <li class="divider"></li>
+                  
                   <li class="dropdown-header">GLSL</li>
                 	{% for post in site.posts %}
                 	{% if post.type == 'blog-glsl' %}

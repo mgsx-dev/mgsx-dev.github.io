@@ -22,6 +22,9 @@ collections:
   people:
     output: true
     type: people
+  articles:
+    output: true
+    type: blog
 
 defaults:
   - scope:

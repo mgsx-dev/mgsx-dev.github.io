@@ -1,0 +1,52 @@
+#N canvas 638 447 921 532 10;
+#X obj 422 56 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 422 317 vline~;
+#X obj 422 409 *~;
+#X obj 441 360 osc~ 440;
+#X obj 422 431 *~ 0.5;
+#X obj 422 473 dac~;
+#X obj 154 95 hsl 128 15 1 1000 1 1 attack-time empty empty -2 -8 0
+10 -262144 -1 -1 3300 1;
+#X text 63 94 Attack Time;
+#X obj 465 33 r attack-time;
+#X msg 422 85 1;
+#X obj 154 115 hsl 128 15 1 1000 1 1 sustain-time empty empty -2 -8
+0 10 -262144 -1 -1 10700 1;
+#X text 56 115 Sustain Time;
+#X obj 492 54 r sustain-time;
+#X obj 154 135 hsl 128 15 1 1000 1 1 decay-time empty empty -2 -8 0
+10 -262144 -1 -1 9900 1;
+#X text 69 135 Decay Time;
+#X obj 519 76 r decay-time;
+#X obj 422 117 pack f f f f;
+#X obj 422 153 unpack f f f f;
+#X obj 470 191 +;
+#X obj 422 230 pack f f f f;
+#X msg 422 265 0 \, \$1 \$2 \, 0 \$4 \$3;
+#X text 626 53 <- slider values received here;
+#X text 529 115 <- pack them as [1 A S D];
+#X text 544 189 <- transform to [1 A S+A D];
+#X text 565 263 <- form the final message : 0 \, 1 A \, 0 D A+S;
+#X text 24 25 below the control \, with init option to save values
+within the patch \, log option for better time control and set rage
+from 1ms to 1000ms, f 47;
+#X connect 0 0 9 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 8 0 16 1;
+#X connect 9 0 16 0;
+#X connect 12 0 16 2;
+#X connect 15 0 16 3;
+#X connect 16 0 17 0;
+#X connect 17 0 19 0;
+#X connect 17 1 18 0;
+#X connect 17 1 19 1;
+#X connect 17 2 18 1;
+#X connect 17 3 19 3;
+#X connect 18 0 19 2;
+#X connect 19 0 20 0;
+#X connect 20 0 1 0;

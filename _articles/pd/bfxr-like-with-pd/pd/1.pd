@@ -1,0 +1,23 @@
+#N canvas 569 273 868 318 10;
+#X obj 422 35 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 422 77 vline~;
+#X obj 422 169 *~;
+#X obj 441 120 osc~ 440;
+#X obj 422 191 *~ 0.5;
+#X obj 422 233 dac~;
+#X msg 422 55 1 \, 0 100;
+#X text 222 35 trigger the sound here ->;
+#X text 166 54 simple 100ms decay from 1 to 0 ->;
+#X text 194 77 this generates the envelop ->;
+#X text 514 119 <- the sinusoidal signal at 440 Hz;
+#X text 167 170 multiply both to get the "bip" ->;
+#X text 97 193 limite the sound to not setroy your ears ->;
+#X text 67 236 output to sound card left and right channels ->;
+#X connect 0 0 6 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 6 0 1 0;
