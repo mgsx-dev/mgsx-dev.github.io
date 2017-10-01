@@ -1,6 +1,6 @@
 ---
 layout: blog
-name:   "OpenFrameworks"
+name:   "GLSL with OpenFrameworks"
 type:   blog-glsl
 group:  of
 github: of-glsl-workshop

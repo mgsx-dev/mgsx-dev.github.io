@@ -6,7 +6,11 @@ layout: default
 
   <header class="product">
     <h1>{{ page.name }}</h1>
-    {% include scm.html %}
+    <ul class="header-menu">
+        {% include support-links.html %}
+        {% include report-links.html %}
+        {% include scm.html %}
+    </ul>
   </header>
 
   <article class="container-fluid post-content">

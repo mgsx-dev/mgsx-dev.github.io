@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: product
 name:  "Apache Eclipse Plugin"
 categories: software product
 tags: dev apache eclipse

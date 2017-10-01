@@ -4,9 +4,18 @@ layout: default
 
 <div class="post">
 
-  <header class="workshop">
-    <h1 class="post-title">Workshop - {{ page.name }}</h1>
-    {% include scm.html %}
+  <header class="workshop" style="padding-right: 140px;">
+    <h1 class="post-title">Tutorial - {{ page.name }}</h1>
+    <ul class="header-menu">
+        {% include support-links.html %}
+        {% include report-links.html %}
+        {% include scm.html %}
+
+        <li>
+          <a href="{{ site.baseurl }}/greetings.html">Ask for more tutorials</a>
+        </li>
+
+    </ul>
   </header>
 
   <article class="container-fluid post-content">

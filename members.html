@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<style>
+p.subtitle {
+  font-style: italic;
+}
+</style>
+
+
+  <header class="home">
+    <h1>MGSX People</h1>
+    <ul class="subtitle">
+      <li>MGSX Network members</li>
+    </ul>
+  </header>
+
+  <article>
+    <div class="container-fluid">
+      <div class="row">
+
+        {% assign sorted_people = site.people | sort: 'date' %}
+        {% for m in sorted_people %}
+
+        <div class="col-md-4 text-center center-block">
+          <div style="border: 1px solid #bbbbbb; background-color: #eeeeee;">
+          <h3>
+            <span class="label label-success">{{ m.name }}</span>
+          </h3>
+            <p class="subtitle">{{ m.description }}&nbsp;</p>
+            <p>
+              <a href="{{ m.url }}">more information...</a>
+            </p>
+          </div>
+        </div> 
+
+        {% endfor %}
+
+        {% if site.team_join %}
+
+        <div class="col-md-4 text-center center-block text-muted">
+          <div style="border: 1px dashed #bbbbbb; background-color: #eeeeee;">
+          <h3>
+            Me
+          </h3>
+            <p class="subtitle">You want to make a partnership and appear here ?</p>
+            <p>
+              <a href="{{ site.baseurl }}/join.html">Join the network</a>
+            </p>
+        </div> 
+        </div>
+
+        {% endif %}
+
+      </div>
+    </div>
+  </article>

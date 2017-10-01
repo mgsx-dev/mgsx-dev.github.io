@@ -1,17 +1,8 @@
 ---
-layout: default
+layout: blog
 ---
 
-<div class="post">
-
-  <header class="workshop">
-    <h1>Workshop GLSL - {{ page.name }}</h1>
-    {% include scm.html %}
-  </header>
-
-  <article class="container-fluid post-content">
-
-    {{ content }}
+{{ content }}
 
 {% assign sorted_posts = (site.posts | where: 'type', 'glsl'  | where: 'group', page.group | sort: 'title', 'first') %}
 {% for post in sorted_posts %}
@@ -20,6 +11,4 @@ layout: default
 
 {% endfor %}
 
-  </article>
-
-</div>
+  

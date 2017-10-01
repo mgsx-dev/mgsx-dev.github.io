@@ -59,40 +59,6 @@ layout: default
         <p><i>Nantes (France) - November 2015</i></p>
       </div>
     </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-4">
-        <h3>MGSX Network</h3>
-        <p>MGSX focus on software developpement including game publishing, digital art project and general software.</p>
-        <p>Beyond the commercial products, the major work is provided freely as opensource components including libraries, developper tools and trainings.</p>
-        <p>With great experience in software engineering we also offer consulting, developement and performance <a href="{{ site.baseurl }}/services.html">services</a>. Please feel free to <a href="{{ site.baseurl }}/services.html">contact us</a> for your needs.</p>
-      </div>
-      <div class="col-md-4">
-        <h3>News</h3>
-        <h4>Dungeon Mastermind scheduled for early 2016</h4>
-        <p>Dungeon Mastermind is a tower defence games in which the player embody the game master like old time RPG.</p>
-        <p>First release will be available on Android platform. PC and iOS version will come later.</p>
-        <p><a href="{% post_url 2015-07-26-DungeonMastermind %}">Read more ...</a></p>
-      </div>
-      <div class="col-md-4">
-        <h3 class="page-heading">Recent Posts</h3>
-        <ul class="post-list">
-          {% for post in site.posts offset: 0 limit: 10 %}
-            <li>
-              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-        
-        <p class="rss-subscribe">
-          <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-            Subscribe via RSS <img src="{{ site.baseurl }}/images/feed-icon-14x14.png">
-          </a>
-        </p>
-        
-      </div>
-    </div>
   </div>
 
   

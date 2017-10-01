@@ -1,0 +1,92 @@
+---
+layout: default
+---
+
+<style>
+p.subtitle {
+  font-style: italic;
+}
+</style>
+
+
+  <header class="home">
+    <h1>MGSX Team</h1>
+    <ul class="subtitle">
+      <li>MGSX Network members</li>
+    </ul>
+  </header>
+
+  <article>
+    <div class="container-fluid">
+      <div class="row">
+
+        {% assign sorted_people = site.people | sort: 'date' %}
+        {% for m in sorted_people %}
+
+          <div style="background: #dddddd; padding-left: 20px; padding-bottom: 5px; padding-top: 1px;">
+            <h2>{{ m.name }} </h2>
+            <p class="text-muted">{{ m.description }} </p>
+          </div>
+
+        <div class="col-md-12">
+
+
+            <div class="row">
+                <div class="col-md-3">
+
+                    
+
+                    <h4>Follow me on</h4>
+                    <ul>
+                        {% if m.website %}
+                        <li><a href="{{m.website}}" target="_blank">My website</a></li>
+                        {% endif %}
+
+                        {% if m.twitter %}
+                        <li><a href="https://twitter.com/{{m.twitter}}" target="_blank">Twitter</a></li>
+                        {% endif %}
+
+                        {% if m.github %}
+                        <li><a href="https://github.com/{{m.github}}" target="_blank">Github</a></li>
+                        {% endif %}
+
+                        {% if m.bitbucket %}
+                        <li><a href="https://bitbucket.org/{{m.bitbucket}}/" target="_blank">Bitbucket</a></li>
+                        {% endif %}
+
+                        {% if m.googleplay %}
+                        <li><a href="https://play.google.com/store/apps/developer?id={{m.googleplay}}" target="_blank">GooglePlay</a></li>
+                        {% endif %}
+
+                        <li><a href="{{m.url}}">MGSX Network</a></li>
+                    </ul>
+                    <h4>Contact me</h4>
+                    <ul>
+                        {% if m.email %}
+                        <li>Email : <a href="mailto:{{ m.email }}">{{ m.email }}</a></li>
+                        {% else %}
+                        <li>Through MGSX : <a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="col-md-9" style="border-left: 1px solid #dddddd;">
+                    <h4>More about me...</h4>
+
+                    {{ m.content }}
+                </div>
+            </div>
+
+
+
+
+
+            
+          
+        </div> 
+
+        {% endfor %}
+
+        
+      </div>
+    </div>
+  </article>

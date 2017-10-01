@@ -1,16 +1,34 @@
-<style>
-footer{
-	font-size: 10px;
-	text-align: center;
-	color: #BBB;
-}
-</style>
 
 <footer class="site-footer">
   <hr>
-  <div>MGSX 2014-2016</div>
-  <div>
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+  <div class="row">
+    <div class="col-md-2 col-md-offset-3">
+
+        Follow us :
+        <a href="https://twitter.com/{{ site.twitter_username }}"><i class="fa fa-2x fa-twitter-square"></i></a>
+        <a href="https://github.com/{{ site.github_username }}/"><i class="fa fa-2x fa-github"></i></a>
+        <a href="https://www.reddit.com/user/{{ site.reddit_username }}"><i class="fa fa-2x fa-reddit"></i></a>
+        <a href="{{ site.itch_url }}"><img src="{{ site.baseurl }}/images/itchio.svg" width="24px" style="margin-top: -6px; background-color: #428bca; padding: 1px"></a>
+        <a href="https://discordapp.com/channels/{{ site.discord_channel_id }}/"><img src="{{ site.baseurl }}/images/discord.svg" width="30px" style="margin-top: -5px;"></a>
+        <br>
+
+        Contact us :
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        
+    </div>
+    <div class="col-md-2">
+      <div>MGSX 2014-2016</div>
+      <div>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+      </div>
+    </div>
+    <div class="col-md-2">
+          <p class="rss-subscribe">
+            <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+              Subscribe via RSS <img src="{{ site.baseurl }}/images/feed-icon-14x14.png">
+            </a>
+          </p>
+    <div>
   </div>
 </footer>
 

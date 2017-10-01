@@ -1,0 +1,43 @@
+---
+layout: page
+title: MGSX Tutorials
+subtitle: Experience sharing
+---
+
+<ul>
+    <li>LibGDX</li>
+    <ul>
+      {% for post in site.posts %}
+      {% if post.type == 'blog' and post.group == 'libgdx' %}
+        <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    <li>GLSL</li>
+    <ul>
+      {% for post in site.posts %}
+        {% if post.type == 'blog-glsl' %}
+          <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+
+    <!--
+    <li>Misc</li>
+    <ul>
+      {% for post in site.posts %}
+      {% if post.type == 'blog' and group == '' %}
+        <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    -->
+
+</ul>
+
+<hr>
+
+You want more tutorials ? <a href="{{ site.baseurl }}/greetings.html">please read this</a>
+
+
+

@@ -5,7 +5,27 @@ description: > # this means to ignore newlines until "baseurl:"
   MGSX Network, software, games, digital art.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://mgsx.net" # the base hostname & protocol for your site
-twitter_username: 
+twitter_username: mgsxdev
+discord_username: mgsx
+discord_channel_id: 357487396927045632
 github_username:  mgsx-dev
 bitbucket_username: germ1
+itch_url: https://mgsx.itch.io/
+reddit_username: mgsx-dev
+team_join: false
 
+bountysource:
+  support_url: https://salt.bountysource.com/teams/mgsx 
+  donate_url: https://salt.bountysource.com/checkout/amount?team=mgsx
+
+collections:
+  people:
+    output: true
+    type: people
+
+defaults:
+  - scope:
+      path: ""
+      type: people
+    values:
+      layout: people

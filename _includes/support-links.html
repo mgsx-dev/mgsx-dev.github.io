@@ -1,0 +1,11 @@
+<li>
+    <!-- TODO bounty source has a tracker id for filtering project ...  -->
+    <!-- but it's not possible to link to a bitbucket project neither to have donations on a github project without issue and associated workflow ...  -->
+    {% if page.categories contains "wip" %}
+        If you like the idea please <a href="{{ site.bountysource.support_url }}">support MGSX</a>
+    {% elsif page.bountysource.tracker_id %}
+        If you like it please <a href="https://www.bountysource.com/teams/mgsx/issues?tracker_ids={{ page.bountysource.tracker_id }}">support {{ page.title }}</a>
+    {% else %}
+        If you like it please <a href="{{ site.bountysource.support_url }}">support MGSX</a>
+    {% endif %}
+</li>

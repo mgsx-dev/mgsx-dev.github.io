@@ -1,0 +1,11 @@
+{% if page.issues %}
+    <li>
+        {% if page.github %}
+            <a href="https://github.com/mgsx-dev/{{ page.github }}/issues/new">Report a bug or request new features for {{ page.title }}</a>
+        {% elsif page.bitbucket %}
+            <a href="https://bitbucket.org/germ1/{{ page.bitbucket }}/issues/new">Report a bug or request new features for {{ page.title }}</a>
+        {% else %}
+            <a href="mailto:{{ site.email }}">Report a bug or request new features for {{ page.title }}</a>
+        {% endif %}
+    </li>
+{% endif %}

@@ -20,7 +20,7 @@
 </style>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+      <div class="navbar-inner">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="icon-bar"></span>
@@ -32,8 +32,10 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li><a href="{{ site.baseurl }}/">Home</a></li>
+
               <li class="divider-vertical"></li>
               <li><a href="{{ site.baseurl }}/services.html">Services</a></li>
+
               <li class="divider-vertical"></li>
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown">Releases <b class="caret"></b></a>
@@ -90,23 +92,53 @@
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
                 <ul class="dropdown-menu inverse-dropdown">
+                  <li class="dropdown-header">LibGDX</li>
+                  {% for post in site.posts %}
+                  {% if post.type == 'blog' and post.group == 'libgdx' %}
+                    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                  {% endif %}
+                  {% endfor %}
+                  <li class="divider"></li>
                   <li class="dropdown-header">GLSL</li>
                 	{% for post in site.posts %}
                 	{% if post.type == 'blog-glsl' %}
                 	  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                 	{% endif %}
                 	{% endfor %}
+
+                  <!--
                   <li class="divider"></li>
                   <li class="dropdown-header">Misc</li>
                   {% for post in site.posts %}
-                  {% if post.type == 'blog' %}
+                  {% if post.type == 'blog' and post.group == '' %}
                     <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                   {% endif %}
                   {% endfor %}
+                  -->
+                  
+                  <li class="divider"></li>
+                  <li><a href="{{ site.baseurl }}/tutorials.html">All tutorials...</a></li>
                 </ul>
               </li>
+
               <li class="divider-vertical"></li>
-              <li><a href="{{ site.baseurl }}/services.html">Contact</a></li>
+
+              <li><a href="{{ site.baseurl }}/contribute.html">Contribute</a></li>
+
+              <li class="divider-vertical"></li>
+              
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                <ul class="dropdown-menu inverse-dropdown">
+                  
+                  <li><a href="{{ site.baseurl }}/whois.html">The network</a></li>
+                  <li><a href="{{ site.baseurl }}/team.html">The team</a></li>
+                  
+                  
+                </ul>
+              </li>
+
+
             </ul>
           </div><!--/.nav-collapse -->
       </div>

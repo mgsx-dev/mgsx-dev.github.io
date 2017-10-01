@@ -13,11 +13,19 @@ a.dropdown-toggle:hover {
     cursor: pointer;
 }
 
+body nav {
+    /*width: 90%;*/
+}
+
+div.navbar-inner{
+    padding-left: 17%;
+}
+
 /* header */
 header {
 	padding-top: 40px;
 	padding-bottom: 40px;
-	padding-left: 150px;
+	padding-left: 20%;
 	background-repeat: repeat-y;
 	color: #FFF;
 }
@@ -25,6 +33,7 @@ header.product,
 header.home{
 	background-image: url('{{ site.baseurl }}/img/abstract-11.jpg');
 	background-color: #ecb993;
+    
 }
 header.project{
 	background-image: url('{{ site.baseurl }}/img/abstract-10.jpg');
@@ -32,10 +41,54 @@ header.project{
 }
 header.workshop{
 	background-image: url('{{ site.baseurl }}/img/abstract-2.jpg');
-	background-color: #fffebb;
+	background-color: #bbba81;
 }
 header ul { list-style: none outside none; margin:0; padding: 0; text-align: left }
 header ul li { display: inline; margin-left: 20pt; color: #FFF ; font-size: 20px;}
+
+header h1 {
+    display: inline-block;
+}
+
+.header-menu {
+    /* margin-right: 300px; */
+    /* border: 1px solid black; */
+    /* background-color: #333333; */
+    /* color: white; */
+}
+
+ul.header-menu
+{
+    margin: 0;
+    padding: 0;
+}
+
+ul.header-menu li
+{
+    margin: 0px;
+    list-style-type: none;
+    display: inline;
+}
+.header-menu a {
+    color: #f4f39d;
+    
+    text-decoration: underline;
+}
+
+.header-menu li {
+    font-size: 14px;
+}
+
+.header-menu a {
+    color: #f4f39d;
+    /* text-decoration: underline; */
+}
+
+
+ul.header-menu li:not(:first-child):before {
+    content: " | ";
+    text-decoration: none;
+}
 
 header.home ul.subtitle li {
   font-style: italic;
@@ -50,11 +103,20 @@ header.home ul.small li {
 
 /* article */
 article {
-	margin-left: 150px; 
-	margin-right: 150px;
+	margin-left: 25%; 
+	margin-right: 25%;
 	background-color: #F4F4F4;
 	padding: 20px;
 }
 .post-list{
   font-size: 12px;
+}
+
+
+/* footer */
+footer{
+    font-size: 10px;
+    text-align: center;
+    color: #BBB;
+    width: 99%; /* this fix scrollbars */
 }

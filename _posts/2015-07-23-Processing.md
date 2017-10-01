@@ -1,6 +1,6 @@
 ---
 layout: glsl-blog
-name:   "Processing"
+name:   "GLSL with Processing"
 type:   blog-glsl
 group:  processing
 github: processing-glsl
