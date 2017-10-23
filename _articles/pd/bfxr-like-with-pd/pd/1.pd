@@ -1,4 +1,4 @@
-#N canvas 569 273 868 318 10;
+#N canvas 566 277 868 318 10;
 #X obj 422 35 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 422 77 vline~;
@@ -12,8 +12,8 @@
 #X text 194 77 this generates the envelop ->;
 #X text 514 119 <- the sinusoidal signal at 440 Hz;
 #X text 167 170 multiply both to get the "bip" ->;
-#X text 97 193 limite the sound to not setroy your ears ->;
 #X text 67 236 output to sound card left and right channels ->;
+#X text 90 193 limite the sound to not destroy your ears ->;
 #X connect 0 0 6 0;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;

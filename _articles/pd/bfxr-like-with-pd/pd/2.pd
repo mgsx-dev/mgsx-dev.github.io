@@ -1,4 +1,4 @@
-#N canvas 638 447 921 532 10;
+#N canvas 635 451 921 532 10;
 #X obj 422 56 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 422 317 vline~;
@@ -29,7 +29,7 @@
 #X text 544 189 <- transform to [1 A S+A D];
 #X text 565 263 <- form the final message : 0 \, 1 A \, 0 D A+S;
 #X text 24 25 below the control \, with init option to save values
-within the patch \, log option for better time control and set rage
+within the patch \, log option for better time control and set range
 from 1ms to 1000ms, f 47;
 #X connect 0 0 9 0;
 #X connect 1 0 2 0;

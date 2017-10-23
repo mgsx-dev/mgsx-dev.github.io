@@ -1,4 +1,4 @@
-#N canvas 687 287 699 532 10;
+#N canvas 684 291 699 532 10;
 #X obj 422 317 vline~;
 #X obj 422 409 *~;
 #X obj 441 360 osc~ 440;
@@ -22,7 +22,7 @@
 #X array wave 44100 float 2;
 #X coords 0 1 44100 -1 200 140 1 0 0;
 #X restore 70 352 graph;
-#X obj 305 474 tabwrite~ wave;
+#X obj 304 474 tabwrite~ wave;
 #X obj 59 16 bng 32 250 50 0 control-change control-change empty 17
 7 0 10 -262144 -1 -1;
 #X connect 0 0 1 0;
