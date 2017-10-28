@@ -1,0 +1,14 @@
+#N canvas 384 448 450 300 10;
+#X obj 97 62 select 0 1 2;
+#X obj 97 84 f \$2;
+#X obj 157 126 f \$3;
+#X obj 233 133 f \$4;
+#X obj 95 200 outlet;
+#X obj 97 19 r \$1;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 0 2 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 0;
+#X connect 5 0 0 0;

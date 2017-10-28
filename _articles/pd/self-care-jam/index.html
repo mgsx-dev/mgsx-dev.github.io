@@ -43,11 +43,30 @@
 
         var patch
         
-        $.get('patch.pd', function(patchStr) {
-          patch = Pd.loadPatch(patchStr)
-          Pd.start() 
-          Pd.send('master', [running ? 1 : 0])
+        var params = ['sea', 'toads', 'bugs', 'storm']
+
+        // TODO send this example to webpd wiki !
+
+        var abstractions = ['map', 'map~', 'soft', 'param', 'pan~', 'vpan~']
+
+        var requests = $.map(abstractions, function(abstraction){
+          return $.get(abstraction + '.pd')
         })
+
+        $.when.apply($, requests).done(function(){
+          $.each(arguments, function(index, response){
+            Pd.registerAbstraction(abstractions[index], response[0])
+          })
+          $.get('patch.pd', function(patchStr) {
+              patch = Pd.loadPatch(patchStr)
+              Pd.start() 
+              Pd.send('master', [running ? 1 : 0])
+              $.each(params, function(i, param){ 
+                Pd.send(param, [1])
+              })
+            })
+        })
+
         function toggle(event){
           if(running){
             $('#btPlayPause').removeClass('btn-success').addClass('btn-danger').html(buttonLabels[0])
@@ -64,7 +83,7 @@
 
           $('#btPlayPause').html(buttonLabels[running ? 1 : 0])
 
-          params = ['sea', 'toads']
+          
 
           for(var i=0 ; i<params.length ; i++){
             var name = params[i]
@@ -72,7 +91,7 @@
             $("#" + name).slider({
               name: name,
               ticks: [0, 1, 2],
-              ticks_tooltip: false,
+              ticks_tooltip: false, // TODO doesn't work
               ticks_labels: ["Low", "Medium", "High"],
               step: 1,
               value: 1
