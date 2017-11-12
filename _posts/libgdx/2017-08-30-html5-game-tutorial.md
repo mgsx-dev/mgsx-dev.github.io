@@ -1,6 +1,6 @@
 ---
 layout: blog
-name:   "WebGL game with Libgdx"
+name:   "WebGL game with Libgdx (part 1)"
 type:   blog
 group:  libgdx
 github: html5-game-tutorial
@@ -143,6 +143,8 @@ We'll see in the next episode how to fix this and how to handle updates correctl
 
 Next episode preview :
 
-* screen size handling
+* screen size and keyboard handling
 * manage github history and repository size
 * using eclipse to code an interactive game
+
+[WebGL game with Libgdx (part 2)]({{ site.baseurl }}/html5-libgdx-tutorial-advanced.html)
