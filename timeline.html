@@ -1,0 +1,27 @@
+---
+layout: page
+title: MGSX Timeline
+subtitle: What's up
+---
+{% assign all_posts = site.posts %}
+{% for article in site.articles %}
+  {% assign all_posts = all_posts | push: article %}
+{% endfor %}
+{% assign sorted_posts = all_posts | sort: "date" | reverse %}
+
+{% assign postsByYear = sorted_posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+
+<ul>
+{% for year in postsByYear %}
+  <li><b>{{ year.name }} ({{year.items | size}})</b></li>
+  <ul>
+    {% for post in year.items %}
+      <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: '%B %d' }} : {{ post.name }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+</ul>
+
+
+
+
