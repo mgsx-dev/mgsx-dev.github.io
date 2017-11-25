@@ -3,37 +3,38 @@ layout: page
 title: MGSX Tutorials
 subtitle: Experience sharing
 ---
-
+{% assign all_posts = site.posts %}
+{% for article in site.articles %}
+  {% assign all_posts = all_posts | push: article %}
+{% endfor %}
+{% assign sorted_posts = all_posts | sort: "date" | reverse %}
 <ul>
     <li>LibGDX</li>
     <ul>
-      {% for post in site.posts %}
+      {% for post in sorted_posts %}
       {% if post.type == 'blog' and post.group == 'libgdx' %}
         <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
       {% endif %}
       {% endfor %}
     </ul>
-    <li>GLSL</li>
+
+    <li>Puredata</li>
     <ul>
-      {% for post in site.posts %}
-        {% if post.type == 'blog-glsl' %}
+      {% for post in sorted_posts %}
+        {% if post.type == 'blog' and post.group == 'pd' %}
           <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
         {% endif %}
         {% endfor %}
     </ul>
 
-    {% assign pd_posts = site.articles | where: 'group', 'pd' %}
-    {% assign pd_posts_size = pd_posts | size %}
-    {% if pd_posts_size != 0 %}
-
-    <li>Puredata</li>
+    <li>GLSL</li>
     <ul>
-      {% for post in pd_posts %}
-        <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
-      {% endfor %}
+      {% for post in sorted_posts %}
+        {% if post.type == 'blog-glsl' %}
+          <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+        {% endif %}
+        {% endfor %}
     </ul>
-
-    {% endif %}
 
     <!--
     <li>Misc</li>

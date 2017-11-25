@@ -18,6 +18,11 @@
 }
 
 </style>
+{% assign all_posts = site.posts %}
+{% for article in site.articles %}
+  {% assign all_posts = all_posts | push: article %}
+{% endfor %}
+{% assign sorted_posts = all_posts | sort: "date" | reverse %}
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -41,21 +46,21 @@
                 <a class="dropdown-toggle" data-toggle="dropdown">Releases <b class="caret"></b></a>
                 <ul class="dropdown-menu inverse-dropdown">
                 <li class="dropdown-header">Games &amp; Creations</li>
-                	{% for post in site.posts %}
+                	{% for post in sorted_posts %}
                 	{% if post.categories contains 'game' and post.categories contains 'product' %}
                 	 <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                 	{% endif %}
                 	{% endfor %}
                   <li class="divider"></li>
                   <li class="dropdown-header">Software &amp; Plugins</li>
-                  {% for post in site.posts %}
+                  {% for post in sorted_posts %}
                   {% if post.categories contains 'software' and post.categories contains 'product' %}
                     <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                   {% endif %}
                   {% endfor %}
                   <li class="divider"></li>
                   <li class="dropdown-header">Libraries &amp; Tools</li>
-                  {% for post in site.posts %}
+                  {% for post in sorted_posts %}
                   {% if post.categories contains 'library' and post.categories contains 'product' %}
                     <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                   {% endif %}
@@ -67,21 +72,21 @@
                 <a class="dropdown-toggle" data-toggle="dropdown">Work in progress <b class="caret"></b></a>
                 <ul class="dropdown-menu inverse-dropdown">
                 <li class="dropdown-header">Games &amp; Creations</li>
-                  {% for post in site.posts %}
+                  {% for post in sorted_posts %}
                   {% if post.categories contains 'game' and post.categories contains 'wip' %}
                    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                   {% endif %}
                   {% endfor %}
                   <li class="divider"></li>
                   <li class="dropdown-header">Software &amp; Plugins</li>
-                  {% for post in site.posts %}
+                  {% for post in sorted_posts %}
                   {% if post.categories contains 'software' and post.categories contains 'wip' %}
                     <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                   {% endif %}
                   {% endfor %}
                   <li class="divider"></li>
                   <li class="dropdown-header">Libraries &amp; Tools</li>
-                  {% for post in site.posts %}
+                  {% for post in sorted_posts %}
                   {% if post.categories contains 'library' and post.categories contains 'wip' %}
                     <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                   {% endif %}
@@ -94,31 +99,25 @@
                 <ul class="dropdown-menu inverse-dropdown">
 
                   <li class="dropdown-header">LibGDX</li>
-                  {% for post in site.posts %}
+                  {% for post in sorted_posts %}
                   {% if post.type == 'blog' and post.group == 'libgdx' %}
                     <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                   {% endif %}
                   {% endfor %}
 
-
-                  {% assign pd_posts = site.articles | where: 'group', 'pd' %}
-                  {% assign pd_posts_size = pd_posts | size %}
-                  {% if pd_posts_size != 0 %}
                   <li class="divider"></li>
                   
                   <li class="dropdown-header">Puredata</li>
-                  {% for post in pd_posts %}
-                  
+                  {% for post in sorted_posts %}
+                  {% if post.type == 'blog' and post.group == 'pd' %}
                     <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
-                  
-                  {% endfor %}
-
                   {% endif %}
+                  {% endfor %}
 
                   <li class="divider"></li>
                   
                   <li class="dropdown-header">GLSL</li>
-                	{% for post in site.posts %}
+                	{% for post in sorted_posts %}
                 	{% if post.type == 'blog-glsl' %}
                 	  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
                 	{% endif %}
@@ -151,7 +150,6 @@
                   
                   <li><a href="{{ site.baseurl }}/whois.html">The network</a></li>
                   <li><a href="{{ site.baseurl }}/team.html">The team</a></li>
-                  
                   
                 </ul>
               </li>
