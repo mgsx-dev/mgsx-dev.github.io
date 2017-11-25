@@ -1,6 +1,7 @@
 ---
 layout: blog
 name:   "BFXR like with Pd"
+date: 2017-10-01 12:00:00
 type:   blog
 group:  pd
 published: true
