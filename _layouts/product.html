@@ -5,7 +5,12 @@ layout: default
 <div class="post">
 
   <header class="product">
-    <h1>{{ page.name }}</h1>
+    <h1>
+      {{ page.name }}
+      {% if page.icon %}
+      <img src="{{ page.icon }}" height="36px" style="float:left; padding-right: 20px;">
+      {% endif %}
+    </h1>
     <ul class="header-menu">
         {% include support-links.html %}
         {% include report-links.html %}
