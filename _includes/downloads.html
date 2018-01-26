@@ -16,6 +16,12 @@
         <a href="https://ldjam.com/events/ludum-dare/{{ page.ludumdare_event }}/{{ page.ludumdare_name }}" target="_blank"><img src="{{ site.baseurl }}/images/ld{{page.ludumdare_event}}banner.png" height="46px"></a>
     </div>
     {% endif %}
+    {% if page.desktop_url %}
+    <div style="display: inline-block">
+        <a href="{{ page.desktop_url }}" target="_blank"><img src="{{ site.baseurl }}/images/desktop.png" height="46px"></a>
+    </div>
+    {% endif %}
+
 
 
 
