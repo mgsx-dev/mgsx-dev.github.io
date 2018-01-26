@@ -2,7 +2,6 @@
 layout: blog
 name:   "Puredata VR workshop"
 date: 2017-12-15 12:00:00
-categories: product library
 type: blog
 group:  pd
 github: pd-vr-workshop
