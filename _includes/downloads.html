@@ -11,6 +11,11 @@
         <a href="https://play.google.com/store/apps/details?id={{ page.android_id }}" target="_blank"><img src="https://play.google.com/intl/en_us/badges/images/badge_new.png"></a>
     </div>
     {% endif %}
+    {% if page.ludumdare_name %}
+    <div style="display: inline-block">
+        <a href="https://ldjam.com/events/ludum-dare/{{ page.ludumdare_event }}/{{ page.ludumdare_name }}" target="_blank"><img src="{{ site.baseurl }}/images/ld{{page.ludumdare_event}}banner.png" height="46px"></a>
+    </div>
+    {% endif %}
 
 
 
