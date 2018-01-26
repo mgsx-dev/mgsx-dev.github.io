@@ -7,7 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.mgsx.net" # the base hostname & protocol for your site
 twitter_username: mgsxdev
 discord_username: mgsx
-discord_channel_id: 357487396927045632
+discord_invit_url: https://discord.gg/DBcutQ
 github_username:  mgsx-dev
 bitbucket_username: germ1
 itch_url: https://mgsx.itch.io/
