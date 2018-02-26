@@ -13,12 +13,28 @@ github: biohazard
 
 {% include itchio-widget.html %}
 
+<br style="clear: both;">
+
+<img src="cover.png" width="45%" style="float: right; margin-left: 50px;">
+
+## The game
+
 A small game made during the [Discord LibGDX game jam](https://discordapp.com/invite/6pgDK9F) 24th-25th February 2018.
 
 Game jam rules was to use LibGDX to create a game or whatever over the weekend (48 hours).
 
 Game jam theme was **"3 colors, 3 buttons"**.
 
+Features :
+
+* LibGDX arcade game
+* No assets
+* Post processing / shader based GFX
+
+BIOHAZARD is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+
+<div style="clear: both;"></div>
 
 ## Making off
 
