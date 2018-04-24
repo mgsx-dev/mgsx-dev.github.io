@@ -1,7 +1,7 @@
 ---
 layout: product
 name:   "Unwinged Platzzle"
-date: 2018-01-23 12:00:00
+date: 2018-04-23 12:00:00
 categories: product game
 group:  libgdx
 itchio_username: mgsx
