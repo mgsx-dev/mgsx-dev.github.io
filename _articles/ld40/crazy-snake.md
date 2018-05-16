@@ -21,16 +21,18 @@ Game jam rules was "compo" competition : made by one developer (game and assets)
 
 Game jam theme was **"The more you have the worse it is"**.
 
-Final results over 1040 submissions in same competition : 
+Final results over **1040** submissions in same competition : 
 
-| Overall | **200th** |
-| Fun | **194th** |
-| Innovation | **514th** |
-| Theme | **135th** |
-| Graphics | **131st** |
-| Audio | **235th** |
-| Humor | **155th** |
-| Mood | **331st** |
+| *Rating* |--- *Score* ---| *Ranking* |
+|----------|:-------------:|:---------|
+| Overall | **3.6** / 5 | **200** th |
+| Fun | **3.6** / 5 | **194** th |
+| Innovation | **2.8** / 5 | **514** th |
+| Theme | **3.9** / 5 | **135** th |
+| Graphics | **3.9** / 5 | **131** st |
+| Audio | **3.2** / 5 | **235** th |
+| Humor | **3.3** / 5 | **155** th |
+| Mood | **3.1** / 5 | **331** st |
 
 Here is some screenshots :
 

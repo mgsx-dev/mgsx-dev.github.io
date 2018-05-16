@@ -23,7 +23,17 @@ Game jam theme was **"Combine 2 Incompatible Genres"**.
 
 The idea was to mix a platformer with a puzzle game like tetris : player only controls the blocks not the hero.
 
-Final results soon.
+Final results over **1031** submissions in same competition : 
+
+| *Rating* |--- *Score* ---| *Ranking* |
+|----------|:-------------:|:---------|
+| Overall | **3.5** / 5 | **263** rd |
+| Fun | **3.5** / 5 | **215** th |
+| Innovation | **4.1** / 5 | **42** nd |
+| Theme | **4.3** / 5 | **45** th |
+| Graphics | **3.9** / 5 | **109** th |
+| Humor | **3.0** / 5 | **244** th |
+| Mood | **2.7** / 5 | **489** th |
 
 Here is some screenshots :
 
