@@ -4,7 +4,7 @@ layout: blog
 
 {{ content }}
 
-{% assign sorted_posts = (site.posts | where: 'type', 'glsl'  | where: 'group', page.group | sort: 'title', 'first') %}
+{% assign sorted_posts = site.posts | where: 'type', 'glsl'  | where: 'group', page.group | sort: 'title', 'first' %}
 {% for post in sorted_posts %}
 
   <a href="{{ post.url }}"><img src="{{ post.preview }}"></a>
