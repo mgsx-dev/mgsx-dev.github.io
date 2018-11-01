@@ -1,0 +1,36 @@
+---
+layout: blog
+name:   "LibGDX platform specific code"
+date: 2018-02-16 13:00:00
+type: blog
+group:  libgdx
+published: false
+---
+
+This tutorial explain how to deal with platform specific code.
+
+The setup :
+
+* you have a LibGDX game project
+* you need to have different implementation regarding to platforms : not same code for android, desktop, html, ...etc.
+
+How to do :
+
+* first define an platform agnostic interface for your "service", let's call it MyGameService
+* then create a base implementation where you can centralize common code for implementations, called MyGameServiceBase (make it abstract)
+* then create a default implemntation extending the base and design for platforms doesn't support this service : MyGameServiceDefault
+* then create a factory for it : MyGameServiceFactory containing a static variable
+* now for each platforms that doesn't support the service :
+    * just set the instance MyGameServiceFactory.instance = new MyGameServiceDefault();
+* for each platform that support the service : 
+    * create an implementation (eg. MyGameServiceAndroid, MyGameServiceDesktop, MyGameServiceWeb)
+    * instanciate in launcher (eg. in android launcher : MyGameServiceFactory.instance = new MyGameServiceAndroid())
+
+Now in your platform independant code (core module) you can easily call MyGameServiceFactory.instance.doThisOrThat()
+
+TODO example of a file selector : 
+* desktop : Applet
+* web : HTML5 File API
+* android : Intent ?
+* iOS : not supported ...
+* core : chooseFile(filter)
