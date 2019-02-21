@@ -19,7 +19,7 @@ github: biohazard
 
 ## The game
 
-A small game made during the [Discord LibGDX game jam](https://discordapp.com/invite/6pgDK9F) 24th-25th February 2018.
+A small game made during the [Discord LibGDX jam 1]({{ site.baseurl }}/articles/discord-libgdx/jam.html) 24th-25th February 2018.
 
 Game jam rules was to use LibGDX to create a game or whatever over the weekend (48 hours).
 
@@ -36,6 +36,11 @@ BIOHAZARD is licensed under a [Creative Commons Attribution-NonCommercial-ShareA
 
 <div style="clear: both;"></div>
 
+<div style="float: right; margin-left: 10px; text-align: center; ">
+<h3>Playthrough by <a href="https://www.youtube.com/channel/UCZhkLaB67rHVjwH1PFai0SA" target="_blank">Raeleus</a></h3>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/AVxSVSjcXBc?start=286&autoplay=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ## Making off
 
 Because this is a game and i want it to be fun, I firstly focused on the gameplay.
@@ -45,6 +50,8 @@ I didn't want to have 3 classical GUI buttons but 3 controlled entites.
 The idea was an arcade/defender/shooter game so i first prototyped it with flat shapes.
 
 The main works was to have nice collisions (without box2D) and i know LibGDX is missing some collision algorithms like i was needed : moving sphere VS static sphere collisions, so i had to implement it (i could propbably make a PR of it to LibGDX later though).
+
+<div style="clear: both;"></div>
 
 <img src="sc1.png" width="45%">
 <img src="sc2.png" width="45%">

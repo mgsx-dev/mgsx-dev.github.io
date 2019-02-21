@@ -18,7 +18,7 @@ github: ghosts-of-the-rain
 
 ## The game
 
-A small game made during the [Discord LibGDX game jam 2](https://discordapp.com/invite/6pgDK9F) 31th March - 1st April 2018.
+A small game made during the [Discord LibGDX jam 2]({{ site.baseurl }}/articles/discord-libgdx/jam.html) 31th March - 1st April 2018.
 
 Game jam rules was to use LibGDX to create a game or whatever over the weekend (48 hours).
 
@@ -33,6 +33,11 @@ Features :
 Ghosts of the rain is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 <div style="clear: both;"></div>
+
+<div style="float: right; margin-left: 10px; text-align: center; ">
+<h3>Playthrough by <a href="https://www.youtube.com/channel/UCZhkLaB67rHVjwH1PFai0SA" target="_blank">Raeleus</a></h3>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/AVxSVSjcXBc?start=1728&autoplay=0" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Gameplay and theme
 
@@ -50,6 +55,8 @@ Rain hurts as well. So player have to deal with :
 * flee from monsters.
 
 During sun time, player have to pickup as many mushrooms as he can to restore his life and limit futur monsters.
+
+<div style="clear: both;"></div>
 
 <img src="sc2.png" width="45%">
 <img src="sc3.png" width="45%">

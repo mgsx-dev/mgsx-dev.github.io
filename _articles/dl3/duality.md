@@ -19,7 +19,7 @@ icon: screen-square.png
 
 ## The game
 
-A small demo made during the [Discord LibGDX game jam 3](https://bigbass1997.com/libgdx/jam/entries.php?jid=3) 26th - 27th May 2018.
+A small demo made during the [Discord LibGDX jam 3]({{ site.baseurl }}/articles/discord-libgdx/jam.html) 26th - 27th May 2018.
 
 Game jam rules was to use LibGDX to create a game or whatever over the weekend (48 hours).
 
@@ -41,6 +41,12 @@ This is an unfinished game, more like a demo : neither player or boss dying as o
 Duality is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 <div style="clear: both;"></div>
+
+<div style="float: right; margin-left: 10px; text-align: center; ">
+<h3>Playthrough by <a href="https://www.youtube.com/channel/UCZhkLaB67rHVjwH1PFai0SA" target="_blank">Raeleus</a></h3>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/AVxSVSjcXBc?start=3152&autoplay=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
 
 <img src="screen1.png" width="24%">
 <img src="screen2.png" width="24%">
