@@ -27,9 +27,17 @@ Game jam theme was **"Energy"**.
 
 <div style="clear: both; height : 20px;"></div>
 
+<div style="float: right; margin-left: 10px; text-align: center; ">
+<h3>Playthrough by <a href="https://www.youtube.com/channel/UCZhkLaB67rHVjwH1PFai0SA" target="_blank">Raeleus</a></h3>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/P03H9zMcFfk?start=1870&autoplay=0" frameborder="0" allowfullscreen></iframe>
+</div>
 
 <img src="menu.png" width="32%">
+<br>
+<br>
 <img src="game1.png" width="32%">
+<br>
+<br>
 <img src="game2.png" width="32%">
 
 <hr>
