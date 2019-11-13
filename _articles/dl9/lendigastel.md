@@ -17,6 +17,10 @@ A small game made during the [Libgdx Discord game jam 9](https://itch.io/jam/lib
 
 Game jam theme was **"Halloween"**.
 
+### Bonus
+
+You can take a look at [Lendigastel making off](makingoff.html)
+
 ### Playthrough made by a youtuber ###
 
 <div style="text-align: center; float: left;">
