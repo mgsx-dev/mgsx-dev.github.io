@@ -51,7 +51,7 @@ So let's clone our repository again but in another folder and on the master bran
 	$ git checkout --orphan master
 	$ git rm -rf .
 
-Our game source repository is now clean, so lets generates our alpha verion of our game.
+Our game source repository is now clean, so lets generates our alpha version of our game.
 
 If you don't have java yet, let's install it : 
 
@@ -70,7 +70,7 @@ Libgdx provides a setup tool to generate project structure :
   * Package : net.mgsx.tutorial
   * Game class: MyGdxGame
   * Destination : ~/git/html5-game-tutorial
-* In "Sub project section" just select desktop and html. You could optionally seelct other targets like Android but it require extra configuration beyond the scope of this tutorial (install AndroidSDK ...etc)
+* In "Sub project section" just select desktop and html. You could optionally select other targets like Android but it require extra configuration beyond the scope of this tutorial (install AndroidSDK ...etc)
 * In "Extensions" unselect all, we don't need any libgdx extensions in this tutorial.
 * Finally press generate (confirm folder override). It could takes some time upon completion, let have a coffee break ;-)
 
