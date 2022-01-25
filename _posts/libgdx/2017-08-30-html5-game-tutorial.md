@@ -53,18 +53,11 @@ So let's clone our repository again but in another folder and on the master bran
 
 Our game source repository is now clean, so lets generates our alpha version of our game.
 
-If you don't have java yet, let's install it : 
-
-	$ sudo add-apt-repository ppa:openjdk-r/ppa  
-	$ sudo pat-get update
-	$ sudo apt-get install openjdk-7-jdk
-
-We will also need the GWT SDK : Download [Latest GWT SDK](http://www.gwtproject.org/download.html) (gwt-2.8.1 at tutorial time) and extract it to your home directory (eg ~/gwt-2.8.1)
-
+If you don't have java 8 yet, let's install it, recommended JDK is provided by [Adoptium](https://adoptium.net/?variant=openjdk8&jvmVariant=hotspot)
 
 Libgdx provides a setup tool to generate project structure :
 
-* Download [Latest Libgdx setup tool](https://bitly.com/1i3C7i3) and run it (you may need to mark it as executable in order to run it from file browser)
+* Download [Latest Libgdx setup tool](https://libgdx.com/assets/downloads/legacy_setup/gdx-setup_latest.jar) and run it (you may need to mark it as executable in order to run it from file browser)
 * In main section, just change destination folder to our project folder (HOME_DIR/git/my-gdx-game)
   * Name : html5-game-tutorial
   * Package : net.mgsx.tutorial
@@ -85,12 +78,12 @@ You should same thing as below ... this is our game!
 ![Desktop Screenshot]({{ site.baseurl }}/img/blog/html5-game-tutorial-desktop.png)
 
 
-Now let's test the HTML5/WebGL version. To simplify things we have to change the run configuration : in **html/build.gradle** set **daemon=false** in the **draftRun** task. Now we compile java code to js code, it could take a while ...
+Now let's test the HTML5/WebGL version. First compilation could take a while ...
 
-	$ ./gradlew html:draftRun
+	$ ./gradlew html:superDev
 
 
-Now visit [http://localhost:8080/html](http://localhost:8080/html), you should see almost the same game. Default screen resolution for desktop and html version differs, we will fix it later, no time to spend, let's deploy the game to the players, they surely like it!
+Now visit [http://localhost:8080](http://localhost:8080), you should see almost the same game. Default screen resolution for desktop and html version differs, we will fix it later, no time to spend, let's deploy the game to the players, they surely like it!
 
 ![Web Screenshot]({{ site.baseurl }}/img/blog/html5-game-tutorial-web.png)
 
@@ -114,7 +107,7 @@ Let test it. Any static web server can be used here : nodejs, ruby, apache ... s
 
 Browse to [http://localhost:4567/index.html](http://localhost:4567/index.html) we should have the same as before.
 
-But what is this refresh button which doesn't work ? Actually distribution contains all dev/debug stuff we don't want for production, that's why we removed the WEB-INF folder but we need to tweak things alittle more :
+But what is this refresh button which doesn't work ? Actually distribution contains all dev/debug stuff we don't want for production, that's why we removed the WEB-INF folder but we need to tweak things a little more :
 
 * edit the index.html file and remove the button (the ugly a tag)
 * remove the refresh.png file
@@ -141,10 +134,6 @@ Now browse again to [https://[account name].github.io/[repository name]](https:/
 That's good ... but players will soon complains about the leak of interactions in your game and above all about the window size! 
 We'll see in the next episode how to fix this and how to handle updates correctly...
 
-Next episode preview :
-
-* screen size and keyboard handling
-* manage github history and repository size
-* using eclipse to code an interactive game
+At this point you may want to read the [official documentation](https://libgdx.com/wiki/html5-backend-and-gwt-specifics) in order to dive in the specifics.
 
 [WebGL game with Libgdx (part 2)]({{ site.baseurl }}/html5-libgdx-tutorial-advanced.html)
