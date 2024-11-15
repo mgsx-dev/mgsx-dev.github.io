@@ -31,7 +31,7 @@ If you think we could work on a particular subject, you could make a proposal th
   * If you want to propose a new subject which could be related to an existing MGSX project or not, please [create an issue](https://github.com/mgsx-dev/mgsx-dev.github.io/issues/new) and explain briefly what is the need for such tutorial and which goals it would have to acheieve.
 
 
-For bug report, feature request on a project hosted on github or bitbucket, please create an issue on the corresponding repository.
+For bug report, feature request on a project hosted on github, please create an issue on the corresponding repository.
 
 
 ### How to influence the roadmap
@@ -39,6 +39,4 @@ For bug report, feature request on a project hosted on github or bitbucket, plea
 As said before, because it's a voluntary work, we can't guarantee any delay or any priority on the roadmap but you can influence decision process in several ways :
 
 * you can vote on opened issues, we surely take in consideration topics with a high vote rate.
-
-* you can post a bounty on an issue, we surely prioritize funded topics. Please have a look at [our Bounty Source page](https://www.bountysource.com/teams/mgsx/issues?tracker_ids=5642092).
 

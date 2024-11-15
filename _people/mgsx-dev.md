@@ -3,7 +3,6 @@ name: Germain Aubert
 date: 2017-09-06 12:54:36
 github: mgsx-dev
 description: MGSX founder.
-bitbucket: germ1
 twitter: mgsxdev
 email: info@mgsx.net
 website: http://www.mgsx.net/

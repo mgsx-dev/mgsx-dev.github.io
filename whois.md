@@ -9,7 +9,7 @@ subtitle: Philosophy and history
 To be honest, there is no really meaning of it and it could change over the time. For now it could be something inspired by [4X games](https://en.wikipedia.org/wiki/4X) "eXplore, eXpand, eXploit, and eXterminate". More precisely : 
 
 * **M**ake : It's all about creation, see releases and work in progress sections.
-* **G**ive - to everybody for free without compensation, see all of our open source project hosted on github/bitbucket.
+* **G**ive - to everybody for free without compensation, see all of our open source project hosted on github/gitlab.
 * **S**hare e**X**perience - because we don't want to keep our knowledge for ourself, see the tutorials section.
 
 ### Is it really all free and all opened ?

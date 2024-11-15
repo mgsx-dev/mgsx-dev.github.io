@@ -42,7 +42,7 @@ That's it, your website is fully operational now, check it at [https://[account 
 
 # Deploy the Alpha version
 
-For this tutorial, we will use the same github repository for both the sources of our game and the deployed version but in typical case, you may want to keep your game source code in a private repository (eg. bitbucket allow you to create as many private repositories as you want for free!).
+For this tutorial, we will use the same github repository for both the sources of our game and the deployed version but in typical case, you may want to keep your game source code in a private repository.
 So let's clone our repository again but in another folder and on the master branch this time :
 
 	$ cd ~/git

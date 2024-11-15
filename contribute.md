@@ -14,8 +14,7 @@ You have several way to contribute to the MGSX initiative :
 
 MGSX is using an open decision and an open funding model based on donation. The principle is quite simple : You can suggest and/or support a particular subjet you want MGSX to work on or you can support the whole work by donate either by a one shot donation or monthly donation, it's up to you :
 
-  * [Support the network](https://salt.bountysource.com/checkout/amount?team=mgsx)
-  * [Fund a particular work](https://www.bountysource.com/teams/mgsx/issues)
+  * [Support the network]({{ site.donate_url }})
 
 
 ### How to take part in decision process

@@ -7,17 +7,14 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://www.mgsx.net" # the base hostname & protocol for your site
 twitter_username: mgsxdev
 discord_username: mgsx
-discord_invit_url: https://discord.gg/pNzSNTF
 github_username:  mgsx-dev
 bitbucket_username: germ1
 itch_url: https://mgsx.itch.io/
 itchio_user: mgsx
-reddit_username: mgsx-dev
 team_join: false
+tipeee_user: mgsx
 
-bountysource:
-  support_url: https://salt.bountysource.com/teams/mgsx 
-  donate_url: https://salt.bountysource.com/checkout/amount?team=mgsx
+donate_url: https://tipeee.com/mgsx
 
 collections:
   people:
