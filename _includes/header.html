@@ -117,11 +117,20 @@
                   <li class="divider"></li>
                   
                   <li class="dropdown-header">GLSL</li>
-                	{% for post in sorted_posts %}
-                	{% if post.type == 'blog-glsl' %}
-                	  <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
-                	{% endif %}
-                	{% endfor %}
+                  {% for post in sorted_posts %}
+                  {% if post.type == 'blog-glsl' %}
+                    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                  {% endif %}
+                  {% endfor %}
+
+                  <li class="divider"></li>
+                  
+                  <li class="dropdown-header">Blender</li>
+                  {% for post in sorted_posts %}
+                  {% if post.type == 'blog' and post.group == 'blender' %}
+                    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+                  {% endif %}
+                  {% endfor %}
 
                   <!--
                   <li class="divider"></li>

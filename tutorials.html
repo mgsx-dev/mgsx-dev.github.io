@@ -36,6 +36,15 @@ subtitle: Experience sharing
         {% endfor %}
     </ul>
 
+    <li>Blender</li>
+    <ul>
+      {% for post in sorted_posts %}
+        {% if post.type == 'blog' and post.group == 'blender' %}
+          <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.name }}</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+
     <!--
     <li>Misc</li>
     <ul>
