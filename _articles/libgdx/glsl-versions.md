@@ -1,3 +1,56 @@
+---
+layout: blog
+name:   "LibGDX GLSL"
+date: 2020-05-30 12:00:00
+type:   blog
+group:  libgdx
+published: true
+---
+
+## Platform and Shader version
+
+* MacOSX (desktop) uses OpenGL ES 2.1 then `#version 120` is required
+* WebGL : ???
+* Android (without GLES3) : `#version 110` or `#version 120`
+* Android (with GLES3) : `#version 300 es`
+* iOS : ???
+* other Desktop (Linux and Windows) : 
+    * OpenGL 3 : `#version 130`
+
+## Cross compatible shader code
+
+Based on [LWJGL Wiki](https://github.com/mattdesl/lwjgl-basics/wiki/GLSL-Versions)
+You can write croos-compatible shader code with few macro :
+
+**Vertex shader**
+
+```
+#ifdef GLSL3
+#define attribute in
+#define varying out
+#endif
+```
+
+**Fragment shader**
+
+```
+#ifdef GLSL3
+#define varying in
+out vec4 out_FragColor;
+#define textureCube texture
+#define texture2D texture
+#else
+#define out_FragColor gl_FragColor
+#endif
+```
+
+Since gl_FragColor is a reserved and decrecated keyword for GLSL3+, you have to replace **gl_FragColor** by **out_FragColor** in your fragement shader code.
+
+Finally you have to inject this macro at runtime in case of OpenGL 3+ or OpenGLES 3+ :
+
+`#define GLSL3`
+
+
 
 
 ```java
@@ -8,13 +61,6 @@ Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
 ```
 
 # Shader
-
-```java
-shader = new ShaderProgram(Gdx.files.internal("shaders/name.vs"), Gdx.files.internal("shaders/name.fs"));
-if(!shader.isCompiled()) throw new GdxRuntimeException(shader.getLog());
-```
-
-# GLSL
 
 ## ImmediateModeRenderer / ShapeRenderer
 
@@ -89,19 +135,5 @@ uniform sampler2D u_texture;
 void main() {
     gl_FragColor = v_color * texture2D(u_texture, v_texCoords);
 }
-
-```
-
-## Model
-
-TODO
-
-
-```vertex
-
-```
-
-
-```fragment
 
 ```
