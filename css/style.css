@@ -120,3 +120,35 @@ footer{
     color: #BBB;
     width: 99%; /* this fix scrollbars */
 }
+
+q:before, q:after{
+    font-size: 1.5em;
+    color: #474;
+}
+q:before {
+    content: '“';
+    padding-right: 10px;
+    padding-left: 5px;
+    border-left: 6px solid #474;
+}
+q:after {
+    content: '”';
+    padding-left: 10px;
+}
+q{
+    background-color: #d2f3de;
+    color: #476547;
+    padding: 10px;
+}
+
+mark{
+    background-color: #d2f3de;
+    color: #476547;
+    padding: 10px;
+    display: block;
+}
+
+em{
+    font-weight: bold;
+}
+
